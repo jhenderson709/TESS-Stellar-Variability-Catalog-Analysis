@@ -1,4 +1,4 @@
-#TESS Stellar Variability Catalog Analysis @ ARDASTELLA
+# TESS Stellar Variability Catalog Analysis @ ARDASTELLA
 ![Ardastella_logo](https://github.com/user-attachments/assets/9b2b480b-0743-43da-a0c6-7212f9db9e1a)
 
 
