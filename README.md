@@ -1,5 +1,5 @@
 # TESS Stellar Variability Catalog Analysis @ ARDASTELLA
-![Ardastella_logo](https://github.com/user-attachments/assets/9b2b480b-0743-43da-a0c6-7212f9db9e1a)
+![ARDASTELLA_banner](https://github.com/user-attachments/assets/528eb0c1-e00b-4eca-ac11-d6536e6d1fd9)
 ## Background and Overview
 ARDASTELLA is a research group consisting of University faculty, PhD students, and international collaborators working on pulsating stars. They specialize in Telescope Operations Planning for astronomical observatories and publishing within Astrophysics and Astronomy literature. Recommendations will be used by research leads and telescope operators to better allocate research team and observatory resources. Insights are delivered to Research and Project managers. 
 
