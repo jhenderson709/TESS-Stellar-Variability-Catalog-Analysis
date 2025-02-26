@@ -4,8 +4,8 @@
 ARDASTELLA is a research group consisting of University faculty, PhD students, and international collaborators working on pulsating stars. They specialize in Telescope Operations Planning for astronomical observatories and publishing within Astrophysics and Astronomy literature. Recommendations will be used by research leads and telescope operators to better allocate research team and observatory resources. Insights are delivered to Research and Project managers. 
 
 ### Project Goals
-  1. Object Segmentation and Profiling: To partition stars, and their observational data, into groups to based on location data, physical parameters, and pulsation data to expidite the search for candidate stars for further study. Determine which locations contain the most stars that have not been published in scientific literature?
-  2. Pulsation Cohorts and Emergent Patterns: To detmermine relationships between the physical parameters of a star and its pulsation data. Variable star searches within large volumes of data is very time consuming. We aim to equip research teams with heuristics derived from analysis that will inform and expedite their variable star searches. 
+  1. Object profiling: To partition stars, and their observational data, into groups to based on location data, physical parameters, and pulsation data to expidite the search for candidate stars for further study. Determine which locations contain the most stars that have not been published in scientific literature?
+  2. Pulsation Cohorts and Emergent Patterns: To detmermine correlations between the physical parameters of a star and its pulsation data. Variable star searches within large volumes of data is very time consuming. We aim to equip research teams with heuristics derived from analysis that will inform and expedite their variable star searches. 
 
 ## Data Overview
 ### Data Pipeline/ETL Process
@@ -28,26 +28,32 @@ Below is a histogram counting the frequency of pulsation periods across the enti
 <p align="center">
   <img src="https://github.com/user-attachments/assets/15097f5a-18ed-4032-8a69-d5f978cd4bdc" alt="Period Distribution">
 </p>
-This visualization indicates a bi-modal distribution; there are two periods that occur most often – ~0.05 days and ~1.0 days. Additionally, there is a significant drop off in detected periods after ~1.10 days. If we begin slicing the data by attributes such as Confidence Level, Spectral Type, and Spectral Designation, we can determine waht kinds of stars are contributing to the modes seen in the aforementioned histogram. 
+This visualization indicates a bi-modal distribution; there are two periods that occur most often – ~0.05 days and ~1.0 days. Additionally, there is a significant drop off in detected periods after ~1.10 days. If we begin slicing the data by attributes such as Confidence Level, Spectral Type, and Spectral Designation, we can determine what kinds of stars/stellar structure contributes to various period ranges.
 <br/><br/>
 
-  **1a. Slicing by Confidence Level: _High Confidence_** In asterosiesmology, data is noisey. Effects such as photon noise (variance intrinsic to light), light from background sky, and noise contributions from the telescope itself, can give rise to signal in a periodogram where, in reality, there is no pulsation. Therefore, asterosiesmologists enforce a detection threshold which helps weed out noise from likely pulsations. The TESS Variability Catalog uses a metric called Power to quantify the strength of a signal. The threshold for a signal to be counted as a pulsation is 0.01 Power, however, pulsations above said threshold are split into High Confidence (> 0.1 Power) and Moderate Confidence (< 0.1 Power) categories. Below is the result when slicing by High Confidence:
+  **1a. Slicing by Confidence Level: _High Confidence_** 
+  In asterosiesmology, data is noisey. Effects such as photon noise (variance intrinsic to light), light from background sky, and noise contributions from the telescope itself, can give rise to signal in a periodogram where, in reality, there is no pulsation. Therefore, asterosiesmologists enforce a detection threshold which helps weed out noise from likely pulsations. The TESS Variability Catalog uses a metric called Power to quantify the strength of a signal. The threshold for a signal to be counted as a pulsation is 0.01 Power, however, pulsations above said threshold are split into High Confidence (> 0.1 Power) and Moderate Confidence (< 0.1 Power) categories. Below is the result when slicing by High Confidence:
 <p align="center">
   <img src="https://github.com/user-attachments/assets/5c5d310f-af4f-4dcd-b096-fe492e3f3af3">
 </p>    
 High confidence pulsations in the dataset predominantly occupy the very short period range of ~0.05 days. Additionally, as we cross highlight the histogram by Spectral Type, it can be seen that A stars contribute to this peak immensely, and F stars contribute to this peak significantly. The high confidence pulsations among the other spectral types are distributed more uniformly.
+<br/><br/>
 
 **1b. Slicing by Confidence Level: _Moderate Confidence_**
+The frequency of moderate confidence pulsations increases until periods of ~1.10 days, at which point frequency decreases sharply and continues a shallow downward trend. A spike is evident at a period of 1.00 days. All spectral types, except for A type stars, exhibit a maximum frequency spike at a period of 1.00 days. Instead, A type stars contribute a bump in periods < 0.1 days, much like their high confidence data. Two spectral types have additional features in their histograms: G type stars have frequency bumps around ~0.16 days and ~1.07 days, and M-type stars have a frequency bump near ~1.07 days as well.WHAT ABOUT G-type DWARF VS GIANT??? SURELY THAT IS RELEVANT FOR PULSATION INFERENCES ABOUT STELLAR STRUCTURE 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/db888ea8-6a06-43a2-ab89-eda7e95973e6">
 </p>    
 > Spectral type and HR diagram context
+<br/><br/>
 
 **2a. Filtering by Spectral Designation: _DWARF_**
 ![Dwarf_all_stars](https://github.com/user-attachments/assets/8c98e116-1b4a-4d77-a2c9-e4858b776d65)
+<br/><br/>
 
 **2b. Filtering by Spectral Designation: _GIANT_**
 ![Giant_all_stars](https://github.com/user-attachments/assets/f502c944-44e8-4761-a739-a3e043f8232b)
+<br/><br/>
 
 ### Affect of confidence levels on pulsation data
 ![LC_all_stars-MadewithClipchamp-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/db888ea8-6a06-43a2-ab89-eda7e95973e6)
