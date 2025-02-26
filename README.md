@@ -32,9 +32,9 @@ This visualization indicates a bi-modal distribution; there are two periods that
 <br/><br/>
 
   **1a. Slicing by Confidence Level: _High Confidence_** In asterosiesmology, data is noisey. Effects such as photon noise (variance intrinsic to light), light from background sky, and noise contributions from the telescope itself, can give rise to signal in a periodogram where, in reality, there is no pulsation. Therefore, asterosiesmologists enforce a detection threshold which helps weed out noise from likely pulsations. The TESS Variability Catalog uses a metric called Power to quantify the strength of a signal. The threshold for a signal to be counted as a pulsation is 0.01 Power, however, pulsations above said threshold are split into High Confidence (> 0.1 Power) and Low Confidence (< 0.1 Power) categories. Below is the result when slicing by High Confidence:
-    
-![HC_all_stars-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/82f982ce-8755-4137-a540-d959621f013e)
-
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/82f982ce-8755-4137-a540-d959621f013e">
+</p>    
 High confidence pulsations in the dataset predominantly occupy the very short period range of ~0.05 days. Additionally, as we cross highlight the histogram by Spectral Type, it can be seen that A stars contribute to this peak immensely, and F stars contribute to this peak significantly. The high confidence pulsations among the other spectral types are distributed more uniformly.
 
 > Spectral type and HR diagram context
