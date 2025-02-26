@@ -25,7 +25,11 @@ The data is comprised of several key aspects of interest to our researchers:
 
 ### What periods should we expect when looking at stars? Different classes?
 Below is a histogram counting the frequency of pulsation periods across the entire data set with no filters applied:
-![period_distribution_all](https://github.com/user-attachments/assets/15097f5a-18ed-4032-8a69-d5f978cd4bdc)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/15097f5a-18ed-4032-8a69-d5f978cd4bdc" alt="Period Distribution">
+</p>
+
+
 This visualization indicates a bi-modal distribution; there are two periods that occur most often – ~0.05 days and ~1.0 days. Additionally, there is a significant drop off in detected periods after ~1.10 days. If we begin slicing the data by attributes such as Confidence Level, Spectral Type, and Spectral Designation, we can determine waht kinds of stars are contributing to the modes seen in the aforementioned histogram. 
   1. _Slicing by Confidence Level._ In asterosiesmology, data is noisey. Effects such as photon noise (variance intrinsic to light), light from background sky, and noise contributions from the telescope itself, can give rise to signal in a periodogram where, in reality, there is no pulsation. Therefore, asterosiesmologists enforce a detection threshold which helps weed out noise from likely pulsations. The TESS Variability Catalog uses a metric called Power to quantify the strength of a signal. The threshold for a signal to be counted as a pulsation is 0.01 Power, however, pulsations above said threshold are split into High Confidence (> 0.1 Power) and Low Confidence (< 0.1 Power) categories. Below is the result when slicing by High Confidence:
 ![dashboard_all_HC](https://github.com/user-attachments/assets/8a22b510-81e6-4e61-a082-2c427893b533)
