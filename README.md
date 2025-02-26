@@ -32,6 +32,7 @@ This visualization indicates a bi-modal distribution; there are two periods that
 <br/><br/>
 
   **1a. Slicing by Confidence Level: _High Confidence_** 
+  
   In asterosiesmology, data is noisey. Effects such as photon noise (variance intrinsic to light), light from background sky, and noise contributions from the telescope itself, can give rise to signal in a periodogram where, in reality, there is no pulsation. Therefore, asterosiesmologists enforce a detection threshold which helps weed out noise from likely pulsations. The TESS Variability Catalog uses a metric called Power to quantify the strength of a signal. The threshold for a signal to be counted as a pulsation is 0.01 Power, however, pulsations above said threshold are split into High Confidence (> 0.1 Power) and Moderate Confidence (< 0.1 Power) categories. Below is the result when slicing by High Confidence:
 <p align="center">
   <img src="https://github.com/user-attachments/assets/5c5d310f-af4f-4dcd-b096-fe492e3f3af3">
@@ -40,6 +41,7 @@ High confidence pulsations in the dataset predominantly occupy the very short pe
 <br/><br/>
 
 **1b. Slicing by Confidence Level: _Moderate Confidence_**
+
 The frequency of moderate confidence pulsations increases until periods of ~1.10 days, at which point frequency decreases sharply and continues a shallow downward trend. A spike is evident at a period of 1.00 days. All spectral types, except for A type stars, exhibit a maximum frequency spike at a period of 1.00 days. Instead, A type stars contribute a bump in periods < 0.1 days, much like their high confidence data. Two spectral types have additional features in their histograms: G type stars have frequency bumps around ~0.16 days and ~1.07 days, and M-type stars have a frequency bump near ~1.07 days as well.WHAT ABOUT G-type DWARF VS GIANT??? SURELY THAT IS RELEVANT FOR PULSATION INFERENCES ABOUT STELLAR STRUCTURE 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/db888ea8-6a06-43a2-ab89-eda7e95973e6">
