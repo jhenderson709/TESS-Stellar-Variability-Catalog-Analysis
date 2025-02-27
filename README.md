@@ -37,6 +37,7 @@ This visualization indicates a bi-modal distribution; there are two periods that
 
 ![HC_all](https://github.com/user-attachments/assets/9751f785-d30c-4fe2-a39b-27643d4d734e)
 > Hertzsprung-Russell Diagram: one of the most important visuals in Astronomy. It allows the user to get a profile of a stellar population at a glance; cooler stars are redder, hotter stars are bluer. More technical users can determine sizes of stars from their location on the graph.
+> Spectral Type: organizes stars into groups based on their surface temperature. They rank O, B, A, F, G, K, M from hottest to coolest.
 
 High confidence pulsations in the dataset predominantly occupy the very short period range of ~0.05 days. These pulsations appear very strongly in their respective periodograms, with an average amplitude in the magnitude of tens of thousands, and an average Power of ~40 times the detection threshold. ???Additionally, as we cross highlight the histogram by Spectral Type, it can be seen that A stars contribute to this peak immensely, and F stars contribute to this peak significantly. The high confidence pulsations among the other spectral types are distributed more uniformly.
 <br/><br/>
