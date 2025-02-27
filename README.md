@@ -26,7 +26,7 @@ The data is comprised of several key aspects of interest to our researchers:
 ### Pulsation Period Distribution and Filtering; _Where should we look for pulsations?_
 Below is a histogram, constructed with a bin size of 0.01 days, counting the frequency of pulsation periods across the entire data set with no filters applied:
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/15097f5a-18ed-4032-8a69-d5f978cd4bdc" alt="Period Distribution">
+  <img src="https://github.com/user-attachments/assets/7c377b2f-9286-485d-9512-f4afc472cf43">
 </p>
 This visualization indicates a bi-modal distribution; there are two periods that occur most often – ~0.05 days and ~1.0 days. Additionally, there is a significant drop off in detected periods after ~1.10 days. If we begin slicing the data by attributes such as Confidence Level, Spectral Type, and Spectral Designation, we can determine what kinds of stars/stellar structure contributes to various period ranges.
 <br/><br/>
@@ -54,6 +54,7 @@ The population profiles of both categories are similar; the small changes in spe
 <br/><br/>
 
 **2a. Filtering by Spectral Designation: _DWARF_**
+This designation refers specifically to Main Sequence dwarfs – they range from O-type (blue i.e. hot, massive) to M-type (red i.e. cool, small) stars that fuse hydrogen to helium in their cores. Most stars in the universe are main sequence stars such as these, and by and large, they are on the cooler side.
 ![Dwarf_all_stars](https://github.com/user-attachments/assets/8c98e116-1b4a-4d77-a2c9-e4858b776d65)
 <br/><br/>
 
