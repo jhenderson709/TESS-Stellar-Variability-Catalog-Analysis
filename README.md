@@ -35,7 +35,7 @@ This visualization indicates a bi-modal distribution; there are two periods that
   
   In asterosiesmology, noise in your data is a fact of life. Effects such as photon noise (variance intrinsic to light), light from background sky, and noise contributions from the telescope itself, can give rise to signal in a periodogram where, in reality, there is no pulsation. Therefore, asterosiesmologists enforce a detection threshold which helps weed out noise from likely pulsations. The TESS Variability Catalog uses a metric called Power to quantify the strength of a signal. The threshold for a signal to be counted as a pulsation is 0.01 Power, however, pulsations above said threshold are split into High Confidence (> 0.1 Power) and Moderate Confidence (< 0.1 Power) categories. Below is the result when slicing by High Confidence:
 
-![dashboard_all_HC](https://github.com/user-attachments/assets/5e1b9079-3f87-4e61-af62-6f0f31d7e56b)
+![HC_all](https://github.com/user-attachments/assets/9751f785-d30c-4fe2-a39b-27643d4d734e)
 > Hertzsprung-Russell Diagram: one of the most important visuals in Astronomy. It allows the user to get a profile of a stellar population at a glance; cooler stars are redder, hotter stars are bluer. More technical users can determine sizes of stars from their location on the graph.
 
 High confidence pulsations in the dataset predominantly occupy the very short period range of ~0.05 days. These pulsations appear very strongly in their respective periodograms, with an average amplitude in the magnitude of tens of thousands, and an average Power of ~40 times the detection threshold. ???Additionally, as we cross highlight the histogram by Spectral Type, it can be seen that A stars contribute to this peak immensely, and F stars contribute to this peak significantly. The high confidence pulsations among the other spectral types are distributed more uniformly.
@@ -44,7 +44,8 @@ High confidence pulsations in the dataset predominantly occupy the very short pe
 **1b. Slicing by Confidence Level: _Moderate Confidence_**
 
 The frequency of moderate confidence pulsations increases until periods of ~1.10 days, at which point frequency decreases sharply and continues a shallow downward trend. A spike is evident at a period of 1.00 days. The average amplitude is the the magnitude of hundreds, and the average power, while still well above the detection threshold, is much closer to the boundary.
-![dashboard_all_MC](https://github.com/user-attachments/assets/095750a7-5bd5-4e7f-8766-613c0655a8c0)
+
+![MC_all](https://github.com/user-attachments/assets/871efcd3-fcff-4a12-b803-31bfaa4f8248)
 
 The population profiles of both categories are similar; the small changes in spectral type distribution cannot be responsible for such a drastic change in mode pulsation. Rather, it is more likely that lower confidence is an intrinsic property of longer period pulsations????
 
