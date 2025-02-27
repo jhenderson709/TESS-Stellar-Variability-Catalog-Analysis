@@ -59,9 +59,17 @@ This designation refers specifically to Main Sequence dwarfs – they range from
 ![Dwarf_all](https://github.com/user-attachments/assets/0479dc0b-5c09-4586-9500-0ab6b7232fa0)
 <br/><br/>
 
+![A_all_dwarf](https://github.com/user-attachments/assets/d3c558f7-edbc-45fc-ad7b-4bd2abb156bb)
+<br/><br/>
+
+![G_K_HC_dwarf](https://github.com/user-attachments/assets/984c3b9d-24d8-484e-a458-00bd4b938b53)
+<br/><br/>
+
 **2b. Filtering by Spectral Designation: _GIANT_**
 ![Giant_all_stars](https://github.com/user-attachments/assets/f502c944-44e8-4761-a739-a3e043f8232b)
 <br/><br/>
+
+
 
 ### Affect of confidence levels on pulsation data
 
