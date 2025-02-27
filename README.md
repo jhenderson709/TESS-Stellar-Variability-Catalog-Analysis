@@ -36,7 +36,7 @@ This visualization indicates a bi-modal distribution; there are two periods that
   In asterosiesmology, noise in your data is a fact of life. Effects such as photon noise (variance intrinsic to light), light from background sky, and noise contributions from the telescope itself, can give rise to signal in a periodogram where, in reality, there is no pulsation. Therefore, asterosiesmologists enforce a detection threshold which helps weed out noise from likely pulsations. The TESS Variability Catalog uses a metric called Power to quantify the strength of a signal. The threshold for a signal to be counted as a pulsation is 0.01 Power, however, pulsations above said threshold are split into High Confidence (> 0.1 Power) and Moderate Confidence (< 0.1 Power) categories. Below is the result when slicing by High Confidence:
 
 ![HC_all](https://github.com/user-attachments/assets/9751f785-d30c-4fe2-a39b-27643d4d734e)
-> _Hertzsprung-Russell Diagram_: one of the most important visuals in Astronomy. It allows the user to get a profile of a stellar population at a glance; cooler stars are redder, hotter stars are bluer. More technical users can determine sizes of stars from their location on the graph.
+> _Hertzsprung-Russell Diagram:_ one of the most important visuals in Astronomy. It allows the user to get a profile of a stellar population at a glance; cooler stars are redder, hotter stars are bluer. More technical users can determine sizes of stars from their location on the graph.
 > _Spectral Type:_ organizes stars into groups based on their surface temperature. They rank O, B, A, F, G, K, M from hottest to coolest.
 
 High confidence pulsations in the dataset predominantly occupy the very short period range of ~0.05 days. These pulsations appear very strongly in their respective periodograms, with an average amplitude in the magnitude of tens of thousands, and an average Power of ~40 times the detection threshold. ???Additionally, as we cross highlight the histogram by Spectral Type, it can be seen that A stars contribute to this peak immensely, and F stars contribute to this peak significantly. The high confidence pulsations among the other spectral types are distributed more uniformly.
@@ -52,12 +52,11 @@ The population profiles of both categories are similar; the small changes in spe
 
 
 
-> Spectral type and HR diagram context
 <br/><br/>
 
 **2a. Filtering by Spectral Designation: _DWARF_**
 This designation refers specifically to Main Sequence dwarfs – they range from O-type (blue i.e. hot, massive) to M-type (red i.e. cool, small) stars that fuse hydrogen to helium in their cores. Most stars in the universe are main sequence stars such as these, and by and large, they are on the cooler side.
-![Dwarf_all_stars](https://github.com/user-attachments/assets/8c98e116-1b4a-4d77-a2c9-e4858b776d65)
+![Dwarf_all](https://github.com/user-attachments/assets/0479dc0b-5c09-4586-9500-0ab6b7232fa0)
 <br/><br/>
 
 **2b. Filtering by Spectral Designation: _GIANT_**
