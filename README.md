@@ -24,7 +24,7 @@ The data is comprised of several key aspects of interest to our researchers:
 ### What parts of the sky have the lowest percentage of unpublished stars?
 
 ### Pulsation Period Distribution and Filtering; _Where should we look for pulsations?_
-Below is a histogram counting the frequency of pulsation periods across the entire data set with no filters applied:
+Below is a histogram, constructed with a bin size of 0.01 days, counting the frequency of pulsation periods across the entire data set with no filters applied:
 <p align="center">
   <img src="https://github.com/user-attachments/assets/15097f5a-18ed-4032-8a69-d5f978cd4bdc" alt="Period Distribution">
 </p>
