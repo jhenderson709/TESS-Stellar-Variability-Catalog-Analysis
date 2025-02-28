@@ -56,7 +56,7 @@ The population profiles of both categories are similar; the small changes in spe
 
 **2a. Filtering by Spectral Designation: _DWARF_**
 
-This designation refers specifically to Main Sequence dwarfs – they range from O-type (blue i.e. hot, massive) to M-type (red i.e. cool, small) stars that fuse hydrogen to helium in their cores. Most stars in the universe are main sequence stars such as these, and by and large, they are on the cooler side.
+This designation refers specifically to Main Sequence dwarfs. They range from O-type (blue i.e. hot, massive) to M-type (red i.e. cool, small) and they all fuse hydrogen to helium in their cores. Most stars in the universe are main sequence stars such as these, and by and large, they are on the cooler side.
 
 ![Dwarf_all](https://github.com/user-attachments/assets/0479dc0b-5c09-4586-9500-0ab6b7232fa0)
 <br/><br/>
@@ -72,8 +72,12 @@ Interestingly, regardless of confidence level, these stars output the vast major
 
 **2b. Filtering by Spectral Designation: _GIANT_**
 
+As main sequence dwarf stars fuse hydrogen into helium, they deplete the amount of hydrogen in their core. When hydrogen in the core runs out, the star begins to contract, heating its core. When temperatures in the core are sufficiently high, the fusion of helium to carbon can begin. This fusion releases far more energy than hydrogen to helium fusion, causing the star to expand to 100 to 1,000 times its original size – a giant star is born. Giant stars can exist as any of the spectral types, but they are commonly found in the K and M temperature ranges. 
+
 ![Giant_all](https://github.com/user-attachments/assets/05560868-c31b-4a6c-8e98-b04c94d96cef)
 <br/><br/>
+
+The above dashboard is configured for all giant stars in the dataset. Pulsation count increases to a local peak of ~0.37 days, before declining breifly 
 
 ![K_HC_giant](https://github.com/user-attachments/assets/b9f6c9d3-f7e5-4a9b-872a-5fb9ef063f2f)
 <br/><br/>
@@ -109,33 +113,3 @@ TESS Variable Catalog Analysis
     Questions for Stakeholders Prior to Project Advancement
     Assumptions and Caveats
 
-      **1a. Slicing by Confidence Level: _High Confidence_** CONFIDENCE MATTERS
-  
-  In asterosiesmology, data is noisey. Effects such as photon noise (variance intrinsic to light), light from background sky, and noise contributions from the telescope itself, can give rise to signal in a periodogram where, in reality, there is no pulsation. Therefore, asterosiesmologists enforce a detection threshold which helps weed out noise from likely pulsations. The TESS Variability Catalog uses a metric called Power to quantify the strength of a signal. The threshold for a signal to be counted as a pulsation is 0.01 Power, however, pulsations above said threshold are split into High Confidence (> 0.1 Power) and Moderate Confidence (< 0.1 Power) categories. Below is the result when slicing by High Confidence:
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/5c5d310f-af4f-4dcd-b096-fe492e3f3af3">
-</p>    
-High confidence pulsations in the dataset predominantly occupy the very short period range of ~0.05 days. Additionally, as we cross highlight the histogram by Spectral Type, it can be seen that A stars contribute to this peak immensely, and F stars contribute to this peak significantly. The high confidence pulsations among the other spectral types are distributed more uniformly.
-<br/><br/>
-
-**1b. Slicing by Confidence Level: _Moderate Confidence_**
-
-The frequency of moderate confidence pulsations increases until periods of ~1.10 days, at which point frequency decreases sharply and continues a shallow downward trend. A spike is evident at a period of 1.00 days. All spectral types, except for A type stars, exhibit a maximum frequency spike at a period of 1.00 days. Instead, A type stars contribute a bump in periods < 0.1 days, much like their high confidence data. Two spectral types have additional features in their histograms: G type stars have frequency bumps around ~0.16 days and ~1.07 days, and M-type stars have a frequency bump near ~1.07 days as well.WHAT ABOUT G-type DWARF VS GIANT??? SURELY THAT IS RELEVANT FOR PULSATION INFERENCES ABOUT STELLAR STRUCTURE 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/db888ea8-6a06-43a2-ab89-eda7e95973e6">
-</p>    
-> Spectral type and HR diagram context
-<br/><br/>
-
-**2a. Filtering by Spectral Designation: _DWARF_**
-![Dwarf_all_stars](https://github.com/user-attachments/assets/8c98e116-1b4a-4d77-a2c9-e4858b776d65)
-<br/><br/>
-
-**2b. Filtering by Spectral Designation: _GIANT_**
-![Giant_all_stars](https://github.com/user-attachments/assets/f502c944-44e8-4761-a739-a3e043f8232b)
-<br/><br/>
-
-### Affect of confidence levels on pulsation data
-
-
-![LC_all_stars-MadewithClipchamp-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/db888ea8-6a06-43a2-ab89-eda7e95973e6)
