@@ -56,10 +56,12 @@ The population profiles of both categories are similar; the small changes in spe
 
 **2a. Filtering by Spectral Designation: _DWARF_**
 This designation refers specifically to Main Sequence dwarfs – they range from O-type (blue i.e. hot, massive) to M-type (red i.e. cool, small) stars that fuse hydrogen to helium in their cores. Most stars in the universe are main sequence stars such as these, and by and large, they are on the cooler side.
+
 ![Dwarf_all](https://github.com/user-attachments/assets/0479dc0b-5c09-4586-9500-0ab6b7232fa0)
 <br/><br/>
 
 A-type dwarf stars have temperatures ranging from 7,300K - 10,000K. They are typically slightly more massive and have slightly larger radii than our sun, but are 5 to 25 times brighter. 
+
 ![A_all_dwarf](https://github.com/user-attachments/assets/d3c558f7-edbc-45fc-ad7b-4bd2abb156bb)
 <br/><br/>
 Interestingly, regardless of confidence level, these stars output the vast majority of observed pulsation periods in the very short period region of ~0.05 days. There are no other outstanding peaks in the period range, and beyond a period of 6 days, there are many bins in the histogram with 0 recorded pulsations. Therefore, researchers conducting variable star searches of A-type dwarfs are advised to focus their efforts in the short period region to conserve resources. Additionally, team members are encouraged to investigate the near-monolithic nature of the pulsations – why do we not see the peak common around a period of 1.00 days, and what can this tell us about the structure of these stars?
