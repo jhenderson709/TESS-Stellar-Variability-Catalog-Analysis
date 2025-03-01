@@ -68,7 +68,7 @@ A-type dwarf stars have temperatures ranging from 7,300K - 10,000K. They are typ
 
 ![A_all_dwarf](https://github.com/user-attachments/assets/d3c558f7-edbc-45fc-ad7b-4bd2abb156bb)
 <br/><br/>
-Interestingly, regardless of confidence level, these stars output the vast majority of observed pulsation periods in the very short period region of ~0.05 days. There are no other outstanding peaks in the period range, and beyond a period of 6 days, there are many bins in the histogram with 0 recorded pulsations. Therefore, researchers conducting variable star searches of A-type dwarfs are advised to focus their efforts in the short period region to conserve resources. Additionally, team members are encouraged to investigate the near-monolithic nature of the pulsations – why do we not see the peak common around a period of 1.00 days, and what can this tell us about the structure of these stars?
+Regardless of confidence level, these stars output the vast majority of observed pulsation in the very short period region of ~0.05 days. There are no other outstanding peaks in the period range, and beyond a period of 6 days, there are many bins in the histogram with 0 recorded pulsations. Therefore, researchers conducting variable star searches of A-type dwarfs are advised to focus their efforts in the short period region to conserve resources. Additionally, team members are encouraged to investigate the near-monolithic nature of the pulsations – why do we not see the peak common around a period of 1.00 days, and what can this tell us about the structure of these stars?
 
 ![G_K_HC_dwarf](https://github.com/user-attachments/assets/984c3b9d-24d8-484e-a458-00bd4b938b53)
 <br/><br/>
