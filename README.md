@@ -64,7 +64,7 @@ This visualization indicates a bi-modal distribution; there are two periods that
 ##
 ### Pulsation modes correlate to physical parameters: _DWARF_
 
-  This designation refers specifically to Main Sequence dwarfs. They range from O-type (blue i.e. hot, massive) to M-type (red i.e. cool, small) and they all fuse hydrogen to helium in their cores. Most stars in the universe are main sequence stars such as these, and by and large, they are on the cooler side.
+  This designation refers specifically to Main Sequence dwarfs. They range from O-type (blue i.e. hot, massive) to M-type (red i.e. cool, small) and they all fuse hydrogen to helium in their cores. Most stars in the universe are main sequence stars such as these, and by and large, they are on the cooler side. Below is a dashboard representing data for all dwarf stars in the data set:
 
 ![Dwarf_all](https://github.com/user-attachments/assets/0479dc0b-5c09-4586-9500-0ab6b7232fa0)
 <br/><br/>
