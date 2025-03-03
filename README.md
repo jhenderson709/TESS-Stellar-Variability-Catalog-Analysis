@@ -1,7 +1,7 @@
 # TESS Stellar Variability Catalog Analysis @ ARDASTELLA
 ![Ardastella_logo](https://github.com/user-attachments/assets/9b2b480b-0743-43da-a0c6-7212f9db9e1a)
 ## Background and Overview
-ARDASTELLA is a research group consisting of University faculty, PhD students, and international collaborators working on pulsating stars. They specialize in Telescope Operations Planning for astronomical observatories and publishing within Astrophysics and Astronomy literature. Recommendations will be used by research leads and telescope operators to better allocate research team and observatory resources. Insights are delivered to Research and Project managers. 
+  ARDASTELLA is a research group consisting of University faculty, PhD students, and international collaborators working on pulsating stars. They specialize in Telescope Operations Planning for astronomical observatories and publishing within Astrophysics and Astronomy literature. Recommendations will be used by research leads and telescope operators to better allocate research team and observatory resources. Insights are delivered to Research and Project managers. 
 
 ### Project Goals
   1. Object profiling: To partition stars, and their observational data, into groups to based on location data, physical parameters, and pulsation data to expidite the search for candidate stars for further study. Determine which locations contain the most stars that have not been published in scientific literature?
@@ -10,7 +10,7 @@ ARDASTELLA is a research group consisting of University faculty, PhD students, a
 
 ## Data Overview
 ### Data Pipeline/ETL Process
-The data is sourced from two different locations: ~84,000 rows (stars) from the TESS Variability Catalog ([published by the American Astronomical Society in 2024](https://iopscience.iop.org/article/10.3847/1538-4365/acdee5)), and an additional ~1,000 rows (stars) from my own pulsating star search of sectors 61-68 of TESS data which was matched with corresponding physical parameter data (Temperature, Mass, Radius, etc.) from the TICv8 catalog (via SQL join on unique star identifier). The whole of the data was migrated from .csv files to a MySQL database that I created where only the most relevant fields were stored in a flat file. The data was then cleaned in MySQL Workbench using data manipulation language. Finally, the flat file was loaded into Power BI using an ODBC connector where it was transformed into a star schema.
+  The data is sourced from two different locations: ~84,000 rows (stars) from the TESS Variability Catalog ([published by the American Astronomical Society in 2024](https://iopscience.iop.org/article/10.3847/1538-4365/acdee5)), and an additional ~1,000 rows (stars) from my own pulsating star search of sectors 61-68 of TESS data which was matched with corresponding physical parameter data (Temperature, Mass, Radius, etc.) from the TICv8 catalog (via SQL join on unique star identifier). The whole of the data was migrated from .csv files to a MySQL database that I created where only the most relevant fields were stored in a flat file. The data was then cleaned in MySQL Workbench using data manipulation language. Finally, the flat file was loaded into Power BI using an ODBC connector where it was transformed into a star schema.
 ### Data Structure Overview
 The data is comprised of several key aspects of interest to our researchers:
   1. Pulsation data: details whether a star has been attributed an identified pulsation, the period of the pulsation, and other characteristics associated with the strength, cause, and confidence level of the pulsation. Why relevant?
@@ -54,7 +54,7 @@ This visualization indicates a bi-modal distribution; there are two periods that
 
 **1b. Slicing by Confidence Level: _Moderate Confidence_**
 
-The frequency of moderate confidence pulsations increases until periods of ~1.10 days, at which point frequency decreases sharply and continues a shallow downward trend. A spike is evident at a period of 1.00 days. The average amplitude is the the magnitude of hundreds, and the average power, while still well above the detection threshold, is much closer to the boundary.
+  The frequency of moderate confidence pulsations increases until periods of ~1.10 days, at which point frequency decreases sharply and continues a shallow downward trend. A spike is evident at a period of 1.00 days. The average amplitude is the the magnitude of hundreds, and the average power, while still well above the detection threshold, is much closer to the boundary.
 
 ![MC_all](https://github.com/user-attachments/assets/871efcd3-fcff-4a12-b803-31bfaa4f8248)
 
@@ -64,14 +64,14 @@ The frequency of moderate confidence pulsations increases until periods of ~1.10
 ##
 ### Pulsation modes correlate to physical parameters: _DWARF_
 
-This designation refers specifically to Main Sequence dwarfs. They range from O-type (blue i.e. hot, massive) to M-type (red i.e. cool, small) and they all fuse hydrogen to helium in their cores. Most stars in the universe are main sequence stars such as these, and by and large, they are on the cooler side.
+  This designation refers specifically to Main Sequence dwarfs. They range from O-type (blue i.e. hot, massive) to M-type (red i.e. cool, small) and they all fuse hydrogen to helium in their cores. Most stars in the universe are main sequence stars such as these, and by and large, they are on the cooler side.
 
 ![Dwarf_all](https://github.com/user-attachments/assets/0479dc0b-5c09-4586-9500-0ab6b7232fa0)
 <br/><br/>
 
 **2a. Filtering by Spectral Type: _A-Type DWARF_**
 
-A-type dwarf stars have temperatures ranging from 7,300K - 10,000K. They are typically slightly more massive and have slightly larger radii than our sun, but are 5 to 25 times brighter. 
+  A-type dwarf stars have temperatures ranging from 7,300K - 10,000K. They are typically slightly more massive and have slightly larger radii than our sun, but are 5 to 25 times brighter. 
 
 ![A_all_dwarf](https://github.com/user-attachments/assets/d3c558f7-edbc-45fc-ad7b-4bd2abb156bb)
 <br/><br/>
@@ -88,7 +88,7 @@ A-type dwarf stars have temperatures ranging from 7,300K - 10,000K. They are typ
 ##
 ### Pulsation modes correlate to physical parameters: _GIANT_
 
-As main sequence dwarf stars fuse hydrogen into helium, they deplete the amount of hydrogen in their core. When hydrogen in the core runs out, the star begins to contract, heating its core. If temperatures in the core are sufficiently high (i.e. if the star is massive enough), the fusion of helium to carbon can begin. This fusion releases far more energy than hydrogen to helium fusion, causing the star to expand to 100 to 1,000 times its original size – a giant star is born. Giant stars can exist as any of the spectral types, but they are commonly found in the K and M temperature ranges. The below dashboard is configured to include data for all giant stars in the dataset.
+  As main sequence dwarf stars fuse hydrogen into helium, they deplete the amount of hydrogen in their core. When hydrogen in the core runs out, the star begins to contract, heating its core. If temperatures in the core are sufficiently high (i.e. if the star is massive enough), the fusion of helium to carbon can begin. This fusion releases far more energy than hydrogen to helium fusion, causing the star to expand to 100 to 1,000 times its original size – a giant star is born. Giant stars can exist as any of the spectral types, but they are commonly found in the K and M temperature ranges. The below dashboard is configured to include data for all giant stars in the dataset.
 
 ![Giant_all](https://github.com/user-attachments/assets/05560868-c31b-4a6c-8e98-b04c94d96cef)
 > Notably, K-type stars make up 80% of the giant population in our data, so this data is largely skewed by contributions from K-type giants. 
@@ -117,7 +117,7 @@ Moderate confidence data for these stars reveal a different story:
 
 **3c. Filtering by Spectral Type: _M-Type GIANT_**
 
-M-type stars are the coolest of the classes defined by the Harvard system with surface temperatures ranging from 2,300K - 3,900K. They are typically stars of average or intermediate mass (1-8 solar masses) and are the second most common type of giant star. The histogram for this group of stars is perhaps the most distinctive of the data set:
+  M-type stars are the coolest of the classes defined by the Harvard system with surface temperatures ranging from 2,300K - 3,900K. They are typically stars of average or intermediate mass (1-8 solar masses) and are the second most common type of giant star. The histogram for this group of stars is perhaps the most distinctive of the data set:
 ![M_HC_giant](https://github.com/user-attachments/assets/0eccc805-9541-4890-8ae5-6432890ea09c)
 <br/><br/>
 
