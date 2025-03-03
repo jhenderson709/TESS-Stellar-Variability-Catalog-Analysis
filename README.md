@@ -101,7 +101,6 @@ This visualization indicates a bi-modal distribution; there are two periods that
 
 K-type stars have a surface temperatures from 3,900K - 5,300K. Giant stars of this type are 
 ![K_HC_giant](https://github.com/user-attachments/assets/b9f6c9d3-f7e5-4a9b-872a-5fb9ef063f2f)
-<br/><br/>
 * High confidence pulsations for K-type giants are somewhat evenly spread across the period range, however, there is a significant bias for periods in the range of ~0.50 to ~6.00 days.
 * Features in the histogram include a frequency peak at 1.05 days, a steep incline in count around 0.75 days, and a local peak in an otherwise relatively inactive region at a period of 0.15 days.
 * The intensity of these pulsations are diminished when compared to high confidence data in the rest of the data set – average amplitude for these stars are ~6,000 ppt, and average Power is 0.33.
@@ -109,8 +108,8 @@ K-type stars have a surface temperatures from 3,900K - 5,300K. Giant stars of th
 **3b. Filtering by Spectral Type: _Moderate Confidence K-Type GIANT_**
 
 Moderate confidence data for these stars reveal a different story:
+
 ![K_MC_giant](https://github.com/user-attachments/assets/115ce025-88a6-4c6c-9790-3ce5416f6502)
-<br/><br/>
 * Most all of the pulsations are consolidated in a period range < ~1.50 days. Beyond this point, there are no pulsations with a frequency of 25, and count continues to taper off until expected values are 1 or 0.
 * Additionally, these pulsations are faint – amplitudes are only ~200 ppt on average and average power is only 4 times the detection threshold.
 * Power and amplitude diminution are generally evident in giants, but it is especially true for K-types. In fact, they have the lowest pulsation amplitudes and power measurements for any of the spectral designations included in the data. These stars are large, more luminous than dwarves, but warmer than red giants, so why is it that these parameters read lower than all dwarf stars, but higher than red giants?
