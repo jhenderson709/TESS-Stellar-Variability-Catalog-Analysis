@@ -19,6 +19,7 @@ The data is comprised of several key aspects of interest to our researchers:
   4. Stellar Classifications: contains descriptors from the data sources that suggest what class/type of star a given object is, and from what instrument the classification comes from. Provides useful groupings by which researchers can analyze subsets of the data.
 
 ![Data_model_outdated](https://github.com/user-attachments/assets/828c9e5b-3b35-4770-b96a-d36cfe93aa65)
+> A screenshot of the semantic model as it exists within Power BI.
 <br/><br/>
 
 ## Executive Summary
@@ -34,6 +35,8 @@ Below is a histogram, constructed with a bin size of 0.01 days, counting the fre
 </p>
 This visualization indicates a bi-modal distribution; there are two periods that occur most often – ~0.05 days and ~1.0 days. Additionally, there is a significant drop off in detected periods after ~1.10 days. If we begin slicing the data by attributes such as Confidence Level, Spectral Type, and Spectral Designation, we can determine what kinds of stars/stellar structure contributes to various period ranges.
 <br/><br/>
+
+### Confidence Matters
 
   **1a. Slicing by Confidence Level: _High Confidence_**
   
