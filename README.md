@@ -36,6 +36,7 @@ Below is a histogram, constructed with a bin size of 0.01 days, counting the fre
 This visualization indicates a bi-modal distribution; there are two periods that occur most often – ~0.05 days and ~1.0 days. Additionally, there is a significant drop off in detected periods after ~1.10 days. If we begin slicing the data by attributes such as Confidence Level, Spectral Type, and Spectral Designation, we can determine what kinds of stars/stellar structure contributes to various period ranges.
 <br/><br/>
 
+##
 ### Confidence Matters
 
   **1a. Slicing by Confidence Level: _High Confidence_**
@@ -56,11 +57,9 @@ The frequency of moderate confidence pulsations increases until periods of ~1.10
 ![MC_all](https://github.com/user-attachments/assets/871efcd3-fcff-4a12-b803-31bfaa4f8248)
 
 The population profiles of both categories are similar; the small changes in spectral type distribution cannot be responsible for such a drastic change in mode pulsation. Rather, it is more likely that lower confidence is an intrinsic property of longer period pulsations????
-
-
-
 <br/><br/>
 
+##
 ### Pulsation modes correlate to physical parameters: _DWARF_
 
 This designation refers specifically to Main Sequence dwarfs. They range from O-type (blue i.e. hot, massive) to M-type (red i.e. cool, small) and they all fuse hydrogen to helium in their cores. Most stars in the universe are main sequence stars such as these, and by and large, they are on the cooler side.
@@ -81,6 +80,7 @@ Regardless of confidence level, these stars output the vast majority of observed
 ![G_K_HC_dwarf](https://github.com/user-attachments/assets/984c3b9d-24d8-484e-a458-00bd4b938b53)
 <br/><br/>
 
+##
 ### Pulsation modes correlate to physical parameters: _GIANT_
 
 As main sequence dwarf stars fuse hydrogen into helium, they deplete the amount of hydrogen in their core. When hydrogen in the core runs out, the star begins to contract, heating its core. If temperatures in the core are sufficiently high (i.e. if the star is massive enough), the fusion of helium to carbon can begin. This fusion releases far more energy than hydrogen to helium fusion, causing the star to expand to 100 to 1,000 times its original size – a giant star is born. Giant stars can exist as any of the spectral types, but they are commonly found in the K and M temperature ranges. 
