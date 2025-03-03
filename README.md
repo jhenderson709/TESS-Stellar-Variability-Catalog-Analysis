@@ -5,7 +5,8 @@ ARDASTELLA is a research group consisting of University faculty, PhD students, a
 
 ### Project Goals
   1. Object profiling: To partition stars, and their observational data, into groups to based on location data, physical parameters, and pulsation data to expidite the search for candidate stars for further study. Determine which locations contain the most stars that have not been published in scientific literature?
-  2. Pulsation Cohorts and Emergent Patterns: To detmermine correlations between the physical parameters of a star and its pulsation data. Variable star searches within large volumes of data is very time consuming. We aim to equip research teams with heuristics derived from analysis that will inform and expedite their variable star searches. 
+  2. Pulsation Cohorts and Emergent Patterns: To detmermine correlations between the physical parameters of a star and its pulsation data. Variable star searches within large volumes of data is very time consuming. We aim to equip research teams with heuristics derived from analysis that will inform and expedite their variable star searches.
+  3. Help users develop an intuition about how TESS operates
 
 ## Data Overview
 ### Data Pipeline/ETL Process
@@ -82,8 +83,11 @@ As main sequence dwarf stars fuse hydrogen into helium, they deplete the amount 
 
 The above dashboard is configured to include data for all giant stars in the dataset. Features in the histogram include a bump in pulsation count around a period of 0.37 days, a global maximum at 1.00 day, and a sharp decline in count at ~1.10 days. From that point on, trends slightly downward until flattening out around a period of 6 days. Unlike the dwarfs in our sample, there is no spike in the very short period region. (what does this tell us about stellar structure; what inferences can be made?) Notably, K-type stars make up 80% of the giant population in our data, so this data is largely skewed by contributions from k-type giants. 
 
+K-type stars have a surface temperatures from 3,900K - 5,300K. Giant stars of this type are 
 ![K_HC_giant](https://github.com/user-attachments/assets/b9f6c9d3-f7e5-4a9b-872a-5fb9ef063f2f)
 <br/><br/>
+High confidence pulsations for K-type giants are somewhat evenly spread across the period range, however, there is a significant bias for periods in the range of ~0.5 to ~6 days. Other features in the histogram include a frequency peak at 1.05 days, a steep incline in count around 0.75 days, and a local peak in an otherwise relatively inactive region at a period of 0.15 days. The intensity of these pulsations are diminished when compared to high confidence data in the rest of the data set – average amplitude for these stars are ~6,000 ppt, and average Power is 0.33.
+
 
 ![K_MC_giant](https://github.com/user-attachments/assets/115ce025-88a6-4c6c-9790-3ce5416f6502)
 <br/><br/>
@@ -91,11 +95,6 @@ The above dashboard is configured to include data for all giant stars in the dat
 ![M_HC_giant](https://github.com/user-attachments/assets/0eccc805-9541-4890-8ae5-6432890ea09c)
 <br/><br/>
 
-
-### Affect of confidence levels on pulsation data
-
-
-![LC_all_stars-MadewithClipchamp-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/db888ea8-6a06-43a2-ab89-eda7e95973e6)
 
 ## Recommendations
 
