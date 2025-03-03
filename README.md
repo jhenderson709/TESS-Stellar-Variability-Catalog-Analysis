@@ -61,23 +61,27 @@ The population profiles of both categories are similar; the small changes in spe
 
 <br/><br/>
 
-**2a. Filtering by Spectral Designation: _DWARF_**
+### Pulsation modes correlate to physical parameters: _DWARF_
 
 This designation refers specifically to Main Sequence dwarfs. They range from O-type (blue i.e. hot, massive) to M-type (red i.e. cool, small) and they all fuse hydrogen to helium in their cores. Most stars in the universe are main sequence stars such as these, and by and large, they are on the cooler side.
 
 ![Dwarf_all](https://github.com/user-attachments/assets/0479dc0b-5c09-4586-9500-0ab6b7232fa0)
 <br/><br/>
-##
+
+**2a. Filtering by Spectral Type: _A-Type DWARF_**
+
 A-type dwarf stars have temperatures ranging from 7,300K - 10,000K. They are typically slightly more massive and have slightly larger radii than our sun, but are 5 to 25 times brighter. 
 
 ![A_all_dwarf](https://github.com/user-attachments/assets/d3c558f7-edbc-45fc-ad7b-4bd2abb156bb)
 <br/><br/>
 Regardless of confidence level, these stars output the vast majority of observed pulsation in the very short period region of ~0.05 days. There are no other outstanding peaks in the period range, and beyond a period of 6 days, there are many bins in the histogram with 0 recorded pulsations. Therefore, researchers conducting variable star searches of A-type dwarfs are advised to focus their efforts in the short period region to conserve resources. Additionally, team members are encouraged to investigate the near-monolithic nature of the pulsations – why do we not see the peak common around a period of 1.00 days, and what can this tell us about the structure of these stars?
 
+**2b. Filtering by Spectral Type: _G-Type, K-Type DWARF_**
+
 ![G_K_HC_dwarf](https://github.com/user-attachments/assets/984c3b9d-24d8-484e-a458-00bd4b938b53)
 <br/><br/>
 
-**2b. Filtering by Spectral Designation: _GIANT_**
+### Pulsation modes correlate to physical parameters: _GIANT_
 
 As main sequence dwarf stars fuse hydrogen into helium, they deplete the amount of hydrogen in their core. When hydrogen in the core runs out, the star begins to contract, heating its core. If temperatures in the core are sufficiently high (i.e. if the star is massive enough), the fusion of helium to carbon can begin. This fusion releases far more energy than hydrogen to helium fusion, causing the star to expand to 100 to 1,000 times its original size – a giant star is born. Giant stars can exist as any of the spectral types, but they are commonly found in the K and M temperature ranges. 
 
@@ -86,15 +90,20 @@ As main sequence dwarf stars fuse hydrogen into helium, they deplete the amount 
 
 The above dashboard is configured to include data for all giant stars in the dataset. Features in the histogram include a bump in pulsation count around a period of 0.37 days, a global maximum at 1.00 day, and a sharp decline in count at ~1.10 days. From that point on, trends slightly downward until flattening out around a period of 6 days. Unlike the dwarfs in our sample, there is no spike in the very short period region. (what does this tell us about stellar structure; what inferences can be made?) Notably, K-type stars make up 80% of the giant population in our data, so this data is largely skewed by contributions from k-type giants. 
 
+**3a. Filtering by Spectral Type: _High Confidence K-Type GIANT_**
+
 K-type stars have a surface temperatures from 3,900K - 5,300K. Giant stars of this type are 
 ![K_HC_giant](https://github.com/user-attachments/assets/b9f6c9d3-f7e5-4a9b-872a-5fb9ef063f2f)
 <br/><br/>
 High confidence pulsations for K-type giants are somewhat evenly spread across the period range, however, there is a significant bias for periods in the range of ~0.50 to ~6.00 days. Other features in the histogram include a frequency peak at 1.05 days, a steep incline in count around 0.75 days, and a local peak in an otherwise relatively inactive region at a period of 0.15 days. The intensity of these pulsations are diminished when compared to high confidence data in the rest of the data set – average amplitude for these stars are ~6,000 ppt, and average Power is 0.33.
 
+**3b. Filtering by Spectral Type: _Moderate Confidence K-Type GIANT_**
 
 ![K_MC_giant](https://github.com/user-attachments/assets/115ce025-88a6-4c6c-9790-3ce5416f6502)
 <br/><br/>
 Moderate confidence data for these stars reveal a different story; most all of the pulsations are consolidated in a period range < ~1.50 days. Beyond this point, there are no pulsations with a frequency of 25, and count continues to taper off until expected values are 1 or 0. Additionally, these pulsations are faint – amplitudes are only ~200 ppt on average and average power is only 4 times the detection threshold. This diminution is generally evident in giants, but it is especially true for K-types. In fact, they have the lowest pulsation amplitudes and power measurements for any of the spectral designations included in the data. These stars are large, more luminous than dwarves, but warmer than red giants, so why is it that these parameters read lower than all dwarf stars, but higher than red giants?
+
+**3c. Filtering by Spectral Type: _M-Type GIANT_**
 
 M-type stars are the coolest of the classes defined by the Harvard system with surface temperatures ranging from 2,300K - 3,900K. They are typically stars of average or intermediate mass (1-8 solar masses) and are the second most common type of giant star.  
 ![M_HC_giant](https://github.com/user-attachments/assets/0eccc805-9541-4890-8ae5-6432890ea09c)
