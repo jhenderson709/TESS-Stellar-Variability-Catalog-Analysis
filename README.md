@@ -46,7 +46,6 @@ This visualization indicates a bi-modal distribution; there are two periods that
 ![HC_all](https://github.com/user-attachments/assets/9751f785-d30c-4fe2-a39b-27643d4d734e)
 > _Hertzsprung-Russell Diagram:_ one of the most important visuals in Astronomy. It allows the user to get a profile of a stellar population at a glance; cooler stars are redder, hotter stars are bluer. More technical users can determine sizes of stars from their location on the graph.
 > _Spectral Type:_ organizes stars into groups based on their surface temperature. They rank O, B, A, F, G, K, M from hottest to coolest.
-
 * High confidence pulsations in the dataset predominantly occupy the very short period range of ~0.05 days.
 *  These pulsations appear very strongly in their respective periodograms, with an average amplitude in the magnitude of tens of thousands, and an average Power of ~40 times the detection threshold.
 * ???Additionally, as we cross highlight the histogram by Spectral Type, it can be seen that A stars contribute to this peak immensely, and F stars contribute to this peak significantly. The high confidence pulsations among the other spectral types are distributed more uniformly.
@@ -57,7 +56,6 @@ This visualization indicates a bi-modal distribution; there are two periods that
   The frequency of moderate confidence pulsations increases until periods of ~1.10 days, at which point frequency decreases sharply and continues a shallow downward trend. A spike is evident at a period of 1.00 days. The average amplitude is the the magnitude of hundreds, and the average power, while still well above the detection threshold, is much closer to the boundary.
 
 ![MC_all](https://github.com/user-attachments/assets/871efcd3-fcff-4a12-b803-31bfaa4f8248)
-
 * The population profiles of both categories are similar; the small changes in spectral type distribution cannot be responsible for such a drastic change in mode pulsation. Rather, it is more likely that lower confidence is an intrinsic property of longer period pulsations????
 <br/><br/>
 
@@ -74,11 +72,10 @@ This visualization indicates a bi-modal distribution; there are two periods that
   A-type dwarf stars have temperatures ranging from 7,300K - 10,000K. They are typically slightly more massive and have slightly larger radii than our sun, but are 5 to 25 times brighter. 
 
 ![A_all_dwarf](https://github.com/user-attachments/assets/d3c558f7-edbc-45fc-ad7b-4bd2abb156bb)
-<br/><br/>
-
 * Regardless of confidence level, these stars output the vast majority of observed pulsation in the very short period region of ~0.05 days.
 *  There are no other outstanding peaks in the period range, and beyond a period of 6 days, there are many bins in the histogram with 0 recorded pulsations.
 *  Therefore, researchers conducting variable star searches of A-type dwarfs are advised to focus their efforts in the short period region to conserve resources. Additionally, team members are encouraged to investigate the near-monolithic nature of the pulsations – why do we not see the peak common around a period of 1.00 days, and what can this tell us about the structure of these stars?
+<br/><br/>
 
 **2b. Filtering by Spectral Type: _G-Type, K-Type DWARF_**
 
@@ -92,10 +89,9 @@ This visualization indicates a bi-modal distribution; there are two periods that
 
 ![Giant_all](https://github.com/user-attachments/assets/05560868-c31b-4a6c-8e98-b04c94d96cef)
 > Notably, K-type stars make up 80% of the giant population in our data, so this data is largely skewed by contributions from K-type giants. 
-<br/><br/>
-
 * Features include a bump in pulsation count around a period of 0.37 days, a global maximum at 1.00 day, and a sharp decline in count at ~1.10 days. From that point on, frequency trends slightly downward until flattening out around a period of 6 days.
 * Unlike the dwarfs in our sample, there is no spike in the very short period region. (what does this tell us about stellar structure; what inferences can be made?)
+<br/><br/>
 
 **3a. Filtering by Spectral Type: _High Confidence K-Type GIANT_**
 
@@ -104,6 +100,7 @@ K-type stars have a surface temperatures from 3,900K - 5,300K. Giant stars of th
 * High confidence pulsations for K-type giants are somewhat evenly spread across the period range, however, there is a significant bias for periods in the range of ~0.50 to ~6.00 days.
 * Features in the histogram include a frequency peak at 1.05 days, a steep incline in count around 0.75 days, and a local peak in an otherwise relatively inactive region at a period of 0.15 days.
 * The intensity of these pulsations are diminished when compared to high confidence data in the rest of the data set – average amplitude for these stars are ~6,000 ppt, and average Power is 0.33.
+<br/><br/>
 
 **3b. Filtering by Spectral Type: _Moderate Confidence K-Type GIANT_**
 
@@ -113,16 +110,16 @@ Moderate confidence data for these stars reveal a different story:
 * Most all of the pulsations are consolidated in a period range < ~1.50 days. Beyond this point, there are no pulsations with a frequency of 25, and count continues to taper off until expected values are 1 or 0.
 * Additionally, these pulsations are faint – amplitudes are only ~200 ppt on average and average power is only 4 times the detection threshold.
 * Power and amplitude diminution are generally evident in giants, but it is especially true for K-types. In fact, they have the lowest pulsation amplitudes and power measurements for any of the spectral designations included in the data. These stars are large, more luminous than dwarves, but warmer than red giants, so why is it that these parameters read lower than all dwarf stars, but higher than red giants?
+<br/><br/>
 
 **3c. Filtering by Spectral Type: _M-Type GIANT_**
 
   M-type stars are the coolest of the classes defined by the Harvard system with surface temperatures ranging from 2,300K - 3,900K. They are typically stars of average or intermediate mass (1-8 solar masses) and are the second most common type of giant star. The histogram for this group of stars is perhaps the most distinctive of the data set:
 ![M_HC_giant](https://github.com/user-attachments/assets/0eccc805-9541-4890-8ae5-6432890ea09c)
-<br/><br/>
-
 * There are almost no pulsations under a period of ~3 days, except for a small local peak at a period of 1 .00 days.
 * The bul of the pulsations are spread throughout the latter 3/4 of the period spectrum, with a global maxiumum at a period of 9.66 days.
 * What is it about these stars that results in such a volume of long period pulsations? What might this tell us about stellar structure?
+<br/><br/>
 
 ## Recommendations
 
