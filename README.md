@@ -27,6 +27,11 @@ The data is comprised of several key aspects of interest to our researchers:
 
 ## Insights Deep-Dive
 ### What parts of the sky have the lowest percentage of unpublished stars?
+![TESS_fov_gif](https://github.com/user-attachments/assets/28a09eff-b35e-40c0-ae1f-7cfb85d89d0b)
+
+
+
+
 
 ### Pulsation Period Distribution and Filtering; _Where should we look for pulsations?_
 Below is a histogram, constructed with a bin size of 0.01 days, counting the frequency of pulsation periods across the entire data set with no filters applied:
