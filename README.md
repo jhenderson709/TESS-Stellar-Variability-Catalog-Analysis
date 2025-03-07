@@ -9,6 +9,7 @@
   3. Help users develop an intuition about how TESS operates
 
 ## Data Overview
+(any sql scripts  python code??)
 ### Data Pipeline/ETL Process
   The data is sourced from two different locations: ~84,000 rows (stars) from the TESS Variability Catalog ([published by the American Astronomical Society in 2024](https://iopscience.iop.org/article/10.3847/1538-4365/acdee5)), and an additional ~1,000 rows (stars) from my own pulsating star search of sectors 61-68 of TESS data which was matched with corresponding physical parameter data (Temperature, Mass, Radius, etc.) from the TICv8 catalog (via SQL join on unique star identifier). The whole of the data was migrated from .csv files to a MySQL database that I created where only the most relevant fields were stored in a flat file. The data was then cleaned in MySQL Workbench using data manipulation language. Finally, the flat file was loaded into Power BI using an ODBC connector where it was transformed into a star schema.
 ### Data Structure Overview
@@ -29,8 +30,15 @@ The data is comprised of several key aspects of interest to our researchers:
 ### What parts of the sky have the lowest percentage of unpublished stars?
 ![TESS_fov_gif](https://github.com/user-attachments/assets/28a09eff-b35e-40c0-ae1f-7cfb85d89d0b)
 
+![TESS_all_VSC](https://github.com/user-attachments/assets/ff5ffaa1-c4e7-469d-bf81-d7a0e0065671)
 
+![TESS_all_year1](https://github.com/user-attachments/assets/7838b5ae-aa91-49e3-ae13-fe98cdadb6f3)
 
+![TESS_all_year2](https://github.com/user-attachments/assets/680286cd-983a-4632-965a-4affef644f17)
+
+![TESS_DWARF_VSC](https://github.com/user-attachments/assets/ae246d66-49e0-4cdf-94f9-70862e5f2fdf)
+
+![TESS_GIANT_VSC](https://github.com/user-attachments/assets/c10545bd-1eb3-4cce-847d-fb486bdaebc7)
 
 
 ### Pulsation Period Distribution and Filtering; _Where should we look for pulsations?_
