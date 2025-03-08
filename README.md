@@ -34,8 +34,10 @@ How does TESS collect data? TESS has 4 identical 24x24 degree field of view came
 </p>
 
 The TESS Variable Star Catalog worked to identify as many variable stars as possible within the first two years of TESS observations. Convienently, TESS takes two years to complete its 'all-sky' survey cycle, so we have access to nearly all known variable stars observed by TESS (except those that slipped through the crack initially, but appear in later cycles) in our data set. The dashboard below is configured to show all TESS VSC data for the first two years of the mission:
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/1dbb5a90-880f-471f-bc18-d7ba3c580af6">
+</p>
 
-![TESS_all_VSC](https://github.com/user-attachments/assets/ff5ffaa1-c4e7-469d-bf81-d7a0e0065671)
 > _Stellar Population Within TESS FOV:_ gray dots in the plot are stars in the data set that have been mentioned in scholarly journals. Indigo/purple dots in the plot are stars that have not yet been mentioned in literature. The blank curved gap inbetween hemispheres represents zones not viewed by TESS – while described as an "all-sky survey," in reality, ~85% of the sky is observed in a two year cycle. _Note:_ due to the volume of data points (~85,000) Power BI is showing "a subset that defines the shape and the outliers".
 *
 
