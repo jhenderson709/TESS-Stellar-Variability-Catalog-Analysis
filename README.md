@@ -38,7 +38,8 @@ The TESS Variable Star Catalog worked to identify as many variable stars as poss
 ![TESS_all_VSC](https://github.com/user-attachments/assets/ff5ffaa1-c4e7-469d-bf81-d7a0e0065671)
 > _Stellar Population Within TESS FOV:_ gray dots in the plot are stars in the data set that have been mentioned in scholarly journals. Indigo/purple dots in the plot are stars that have not yet been mentioned in literature. The blank curved gap inbetween hemispheres represents zones not viewed by TESS – while described as an "all-sky survey," in reality, ~85% of the sky is observed in a two year cycle. _Note:_ due to the volume of data points (~85,000) Power BI is showing "a subset that defines the shape and the outliers".
 *
-> 
+
+##
 **1a. Slicing by Year: _Year 1_**
 Year 1 observations comprise sector IDs 1 - 13. These sectors encompass the southern hemisphere of TESS' field of view:
 
@@ -46,7 +47,8 @@ Year 1 observations comprise sector IDs 1 - 13. These sectors encompass the sout
 * The top 5 sectors IDs in year 1 with the largest percentages of unpublished variable stars are as follows: 10 (9%), 7 (8%), 11 (7%), 6 (7%), 3 (7%).
 * Year 1 observations contain the 3 most published sectors in the dataset; only 2% of sector 1 stars are unpublished verified variable stars, while sectors 13 and 4 have 4% and 5% respectively.
 * While there are more unpublished stars within this data, their are fewer unpublished stars when compared to year 2 proportionally.
-  
+
+
 **1b. Slicing by Year: _Year 2_**
 Year 2 observations comprise sector IDs 14 - 26. These sectors encompass the northern hemisphere of TESS' field of view:
 
@@ -55,21 +57,22 @@ Year 2 observations comprise sector IDs 14 - 26. These sectors encompass the nor
 * Sector 19 has the highest percentage of unpublished variable stars across the whole data set: 11.11%
 * Proportionally, Year 2 observations have a greater porportion of DWARF stars across all of its sectors when compared to Year 1.
 
-**1b. Slicing by Spectral Designation: _DWARF_**
+##
+**2a. Slicing by Spectral Designation: _DWARF_**
 
 ![TESS_DWARF_VSC](https://github.com/user-attachments/assets/ae246d66-49e0-4cdf-94f9-70862e5f2fdf)
-*
-*
-*
+* DWARF stars are common in the dataset – they account for 64% of stars in the catlog. 
+* DWARF stars are much less published than giants
+* Sector 19 DWARF stars are 16% unpublished!
 
-**1b. Slicing by Spectral Designation: _GIANT_**
+**2b. Slicing by Spectral Designation: _GIANT_**
 
 ![TESS_GIANT_VSC](https://github.com/user-attachments/assets/c10545bd-1eb3-4cce-847d-fb486bdaebc7)
-*
-*
-*
+* GIANT stars are less common in any stellar population, and that proves true in the TESS VSC. 29% of stars in the data set are GIANT stars.
+* GIANT stars within the data have been thouroughly examined. Many sectors have 99% of their GIANT stars featured in a publication already.
+* Sector 10 has the highest percenatage of unpublished GIANT stars: 5%
 
-
+##
 ### Pulsation Period Distribution and Filtering; _Where should we look for pulsations?_
 Below is a histogram, constructed with a bin size of 0.01 days, counting the frequency of pulsation periods across the entire data set with no filters applied:
 <p align="center">
