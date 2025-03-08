@@ -53,6 +53,7 @@ In order to make best use of team resources, we want to direct attention to thos
 
 
 **1a. Slicing by Year: _Year 1_**
+
 Year 1 observations comprise sector IDs 1 - 13. These sectors encompass the southern hemisphere of TESS' field of view:
 
 ![TESS_all_year1](https://github.com/user-attachments/assets/7838b5ae-aa91-49e3-ae13-fe98cdadb6f3)
@@ -62,6 +63,7 @@ Year 1 observations comprise sector IDs 1 - 13. These sectors encompass the sout
 
 
 **1b. Slicing by Year: _Year 2_**
+
 Year 2 observations comprise sector IDs 14 - 26. These sectors encompass the northern hemisphere of TESS' field of view:
 
 ![TESS_all_year2](https://github.com/user-attachments/assets/680286cd-983a-4632-965a-4affef644f17)
