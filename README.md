@@ -50,7 +50,7 @@ The gray dots in the Mollweide plot are stars in the data set that have been men
 ## Insights Deep-Dive
 ### Where should researches look for candidate stars for academic papers?
 In order to make best use of team resources, we want to direct attention to those sectors of the sky which have the highest percentages of unpublished stars. Once this has been determined, researchers will be recommended to said sectors to conduct period spacing searches on known variable stars(?). However, ideal sectors may vary depeding on one's research objectives. For example: where should one look if they are hoping to publish on stars within a specific year of TESS observations? What sector should one examine if they are focused on publishing on pulsating GIANT stars? Pulsating DWARF stars? The dynamic filtering functionality implemented into the below dashboards allow team members to answer these questions.
-
+<br/><br/>
 
 **1a. Slicing by Year: _Year 1_**
 
@@ -60,7 +60,7 @@ Year 1 observations comprise sector IDs 1 - 13. These sectors encompass the sout
 * The top 5 sectors IDs in year 1 with the largest percentages of unpublished variable stars are as follows: 10 (9%), 7 (8%), 11 (7%), 6 (7%), 3 (7%).
 * Year 1 observations contain the 3 most published sectors in the dataset; only 2% of sector 1 stars are unpublished verified variable stars, while sectors 13 and 4 have 4% and 5% respectively.
 * While there are more unpublished stars within this data, their are fewer unpublished stars when compared to year 2 proportionally.
-
+<br/><br/>
 
 **1b. Slicing by Year: _Year 2_**
 
@@ -70,6 +70,7 @@ Year 2 observations comprise sector IDs 14 - 26. These sectors encompass the nor
 * The top 5 sectors IDs in year 2 with the largest percentages of unpublished variable stars are as follows: 19 (11%), 24 (10%), 18 (8%), 17 (7%), 16 (7%).
 * Sector 19 has the highest percentage of unpublished variable stars across the whole data set: 11.11%
 * Proportionally, Year 2 observations have a greater porportion of DWARF stars across all of its sectors when compared to Year 1.
+<br/><br/>
 
 ##
 **2a. Slicing by Spectral Designation: _DWARF_**
@@ -78,6 +79,7 @@ Year 2 observations comprise sector IDs 14 - 26. These sectors encompass the nor
 * DWARF stars are common in the dataset – they account for 64% of stars in the catlog. 
 * DWARF stars are much less published than giants
 * Sector 19 DWARF stars are 16% unpublished!
+<br/><br/>
 
 **2b. Slicing by Spectral Designation: _GIANT_**
 
