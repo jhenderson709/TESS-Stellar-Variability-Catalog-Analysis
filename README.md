@@ -48,7 +48,7 @@ The gray dots in the Mollweide plot are stars in the data set that have been men
 30 second take away with key insights...
 
 ## Insights Deep-Dive
-### What parts of the sky have the lowest percentage of unpublished stars?
+### Where should researches look for candidate stars for academic papers?
 In order to make best use of team resources, we want to direct attention to those sectors of the sky which have the highest percentages of unpublished stars. Once this has been determined, researchers will be recommended to said sectors to conduct period spacing searches on known variable stars(?). However, ideal sectors may vary depeding on one's research objectives. For example: where should one look if they are hoping to publish on stars within a specific year of TESS observations? What sector should one examine if they are focused on publishing on pulsating GIANT stars? Pulsating DWARF stars? The dynamic filtering functionality implemented into the below dashboards allow team members to answer these questions.
 
 ##
