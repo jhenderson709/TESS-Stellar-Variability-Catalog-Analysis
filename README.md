@@ -18,10 +18,28 @@ The data is comprised of several key aspects of interest to our researchers:
   2. Physical Parameters: data describing the stellar structure of stars; measures of physical properties such as surface temperature, mass, radius, etc. Why relevant?
   3. Location Data: details the location of stars in the sky – attributes such as celestial coordinates, distance from observer, and indicators of whether the an object's position will change over time. Why relevant?
   4. Stellar Classifications: contains descriptors from the data sources that suggest what class/type of star a given object is, and from what instrument the classification comes from. Provides useful groupings by which researchers can analyze subsets of the data.
+     
 
 ![Data_model_outdated](https://github.com/user-attachments/assets/828c9e5b-3b35-4770-b96a-d36cfe93aa65)
 > A screenshot of the semantic model as it exists within Power BI.
 <br/><br/>
+
+### TESS Background; What is TESS, and how does it collect data?
+The Transiting Exoplanet Survey Satellite (TESS) space telescope has been a prolific source of astronomical data since its launch in 2018. While ostensibly intended for the discovery of exoplanets, its collection of time-series photometric data has been a valuable asset to scholars of stellar pulsations – asteroseismologists – following the retirement of the Kepler space telescope. TESS has four identical 24x24 degree field of view cameras that are ordered in such a way to form a composite 24x96 degree field of view [13]. This 24x96 degree slice of sky is called a sector. Each ecliptic hemisphere of the sky is composed of 13 adjacent and partially overlapping sectors. To collect data, TESS is pointed at one sector and observes it (almost) continuously with various sampling rates for 27.4 days before it is directed at the next adjacent sector. The 13 sector survey takes a year to complete, after which the telescope shifts its field of view to the opposite hemisphere for observation of another series of 13 sectors. When both ecliptic hemispheres have been surveyed, TESS shifts its field of view again to the previously observed hemisphere at which point it will take new data of previously observed sectors. If a sector is called sector 1 when TESS observes it for the first time, when the telescope returns to that sector in its respective hemisphere two years later, it will be called sector 27.
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/28a09eff-b35e-40c0-ae1f-7cfb85d89d0b">
+</p>
+> A demonstration of how TESS samples the night sky using data from the the TESS Variable Star Catalog. Each frame represents one sector of data from TESS' point of view. Note how the sectors flip from one hemisphere to the other – this change in polarity represents a new year of observations.
+
+
+The TESS Variable Star Catalog worked to identify as many variable stars as possible within the first two years of TESS observations. Because TESS takes two years to complete its 'all-sky' survey cycle, we have access to nearly all known variable stars observed by TESS (except those that slipped through the crack initially, but appear in later cycles) in our data set. The dashboard below is configured to show all TESS VSC data for the first two years of the mission concurrently:
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/1dbb5a90-880f-471f-bc18-d7ba3c580af6">
+</p>
+
+> _Stellar Population Within TESS FOV:_ gray dots in the plot are stars in the data set that have been mentioned in scholarly journals. Indigo/purple dots in the plot are stars that have not yet been mentioned in literature. The blank curved gap inbetween hemispheres represents zones not viewed by TESS – while described as an "all-sky survey," in reality, only ~85% of the sky is observed in a two year cycle.
+> _Note:_ due to the volume of data points (~85,000) Power BI is showing "a subset that defines the shape and the outliers".
+
 
 ## Executive Summary
 30 second take away with key insights...
