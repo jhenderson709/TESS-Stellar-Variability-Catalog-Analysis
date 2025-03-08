@@ -29,6 +29,7 @@ The Transiting Exoplanet Survey Satellite (TESS) space telescope has been a prol
 <p align="center">
   <img src="https://github.com/user-attachments/assets/28a09eff-b35e-40c0-ae1f-7cfb85d89d0b">
 </p>
+
 > A demonstration of how TESS samples the night sky using data from the the TESS Variable Star Catalog. Each frame represents one sector of data from TESS' point of view. Note how the sectors flip from one hemisphere to the other – this change in polarity represents a new year of observations.
 
 
