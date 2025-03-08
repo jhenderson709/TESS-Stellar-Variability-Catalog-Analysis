@@ -38,7 +38,7 @@ The TESS Variable Star Catalog worked to identify as many variable stars as poss
   <img src="https://github.com/user-attachments/assets/1dbb5a90-880f-471f-bc18-d7ba3c580af6">
 </p>
 
-> This graph, and the one above it, are Mollweide projections – a way of drawing the entire surface of a round object, like Earth or the night sky, onto a flat oval shape. In this case, I have taken equatorial coordinates (Right Ascension and Declination), which describe the location of objects in space on the celestial sphere, and performed numerous tranformations on them to plot them appropriately on this 2-D space. _Note:_ due to the volume of data points (~85,000) Power BI is showing "a subset that defines the shape and the outliers".
+> This graph, and the one above it, are Mollweide projections – a way of drawing the entire surface of a round object, like Earth or the night sky, onto a flat oval shape. In this case, I have taken equatorial coordinates (Right Ascension and Declination), which describe the location of objects in space on the celestial sphere, and performed numerous tranformations on them to plot them appropriately. _Note:_ due to the volume of data points (~85,000) Power BI is showing "a subset that defines the shape and the outliers".
 
 The gray dots in the Mollweide plot are stars in the data set that have been mentioned in academic papers. Indigo/purple dots in the plot are stars that have not yet been mentioned in academic papers. These are the stars we are most interested in; if upon further study these stars reveal something new, interesting, or useful for existing mathematical models, an academic paper can be drafted about them. The blank curved gap inbetween hemispheres represents zones not viewed by TESS – while described as an "all-sky survey," in reality, only ~85% of the sky is observed in a two year cycle.
 
@@ -49,18 +49,7 @@ The gray dots in the Mollweide plot are stars in the data set that have been men
 
 ## Insights Deep-Dive
 ### What parts of the sky have the lowest percentage of unpublished stars?
-How does TESS collect data? TESS has 4 identical 24x24 degree field of view cameras that are ordered in such a way to form a composite 24x90 degree field of view. This 24x90 degree slice of sky is called a sector. Each ecliptic hemisphere of the sky comprises 13 adjacent and partially overlapping sectors. TESS points at one sector and observes it (almost) continuously for 27.4 days before it is directed at the next adjacent sector. After each sector of a given hemisphere has been observed over the course of a year, the telescope shifts its focus to the opposite hemisphere for another series of 13 sectors. Upon observing each sector of said hemisphere, TESS shifts its focus again to the prior hemisphere at which point it will take new data of previously observed sectors.
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/28a09eff-b35e-40c0-ae1f-7cfb85d89d0b">
-</p>
-
-The TESS Variable Star Catalog worked to identify as many variable stars as possible within the first two years of TESS observations. Convienently, TESS takes two years to complete its 'all-sky' survey cycle, so we have access to nearly all known variable stars observed by TESS (except those that slipped through the crack initially, but appear in later cycles) in our data set. The dashboard below is configured to show all TESS VSC data for the first two years of the mission:
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/1dbb5a90-880f-471f-bc18-d7ba3c580af6">
-</p>
-
-> _Stellar Population Within TESS FOV:_ gray dots in the plot are stars in the data set that have been mentioned in scholarly journals. Indigo/purple dots in the plot are stars that have not yet been mentioned in literature. The blank curved gap inbetween hemispheres represents zones not viewed by TESS – while described as an "all-sky survey," in reality, ~85% of the sky is observed in a two year cycle. _Note:_ due to the volume of data points (~85,000) Power BI is showing "a subset that defines the shape and the outliers".
-*
+In order to make best use of team resources, we want to direct attention to those sectors of the sky which have the highest percentages of unpublished stars. Once this has been determined, researchers will be recommended to said sectors to conduct period spacing searches on known variable stars(?). However, ideal sectors may vary depeding on one's research objectives. For example: where should one look if they are hoping to publish on stars within a specific year of TESS observations? What sector should one examine if they are focused on publishing on pulsating GIANT stars? Pulsating DWARF stars? The dynamic filtering functionality implemented into the below dashboards allow team members to answer these questions.
 
 ##
 **1a. Slicing by Year: _Year 1_**
