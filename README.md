@@ -9,9 +9,27 @@
   3. Help users develop an intuition about how TESS operates
 
 ## Data Overview
-(any sql scripts  python code??)
+
+First, we load the raw data into a staging table using the following SQL query:
+
+```sql
+LOAD DATA LOCAL INFILE 'C:\\path\\to\\file.csv'
+INTO TABLE staging_table
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n'
+IGNORE 1 LINES
+(tess_id, sector_id, temperature, radius);
 ### Data Pipeline/ETL Process
   The data is sourced from two different locations: ~84,000 rows (stars) from the TESS Variability Catalog ([published by the American Astronomical Society in 2024](https://iopscience.iop.org/article/10.3847/1538-4365/acdee5)), and an additional ~1,000 rows (stars) from my own pulsating star search of sectors 61-68 of TESS data which was matched with corresponding physical parameter data (Temperature, Mass, Radius, etc.) from the TICv8 catalog (via SQL join on unique star identifier). The whole of the data was migrated from .csv files to a MySQL database that I created where only the most relevant fields were stored in a flat file. The data was then cleaned in MySQL Workbench using data manipulation language. Finally, the flat file was loaded into Power BI using an ODBC connector where it was transformed into a star schema.
+
+![TESS_SVC_csv](https://github.com/user-attachments/assets/d16d9cea-c39d-4293-9c75-801b7da5950e)
+
+CREATE TABLE STATEMENT
+(mention cleaning process? i.e. table was first created with all data types set to varchar. then, empty or poor quality cells were turned into null values, and columns were stripped of unnecessary characters using REGEX. Then, data types were appropriately updated to reflect cell values.
+![TESS_VSC_sqlmigration](https://github.com/user-attachments/assets/70c95b42-f2fc-477c-a4cb-0b32c049658f)
+
+MENTIONED IN PAPER PYTHON SCRIPT?
+
 ### Data Structure Overview
 The data is comprised of several key aspects of interest to our researchers:
   1. Pulsation data: details whether a star has been attributed an identified pulsation, the period of the pulsation, and other characteristics associated with the strength, cause, and confidence level of the pulsation. Why relevant?
