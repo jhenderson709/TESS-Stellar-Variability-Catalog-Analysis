@@ -17,13 +17,13 @@
 
 This file contains ~85,000 rows with well over 100 columns. Most of the data are numeric values describing physical parameters of stars, measurments describing observational conditions, or text fields helping to identify or denote various star types and data sources.
 
-In order to start working with the data, I decided to load the data into a personal dedicated MySQL database. First, a table configured for only the most relevant fields was required:
+In order to start working with the data, I decided to load the .csv into a personal dedicated MySQL database. First, a table configured for only the most relevant fields was required:
 
 ```sql
 CREATE TABLE TESS_VSC_varchar_staging (
     tess_id VARCHAR(50),
     TWOMASS VARCHAR(50),
-    objType VARCHAR(16),
+    objType VARCHAR(50),
     Sector VARCHAR(50),
     Teff VARCHAR(50),
     e_Teff VARCHAR(50),
@@ -61,7 +61,7 @@ IGNORE 1 LINES
 (tess_id, Sector, period_var_1, amp_var_1, power_1, TWOMASS, objType, ra, `dec`, pmRA, e_pmRA, pmDEC, e_pmDEC, Teff, e_Teff, logg, e_logg, rad, e_rad, mass, e_mass, rho, e_rho);
 ```
 
-Now, with the data present in MySQL, it could be cleaned; using data manipulation language, nan values were updated to be set equal to null, decimal places were truncated to desired precisions, REGEXP was used to remove undesired spaces and special characters, and some fields were transformed to be more workable. 
+Now the data could be cleaned; using data manipulation language, nan values were updated to be set equal to null, decimal places were truncated to desired precisions, REGEXP was used to remove undesired spaces and special characters, and some fields were transformed to be more workable. 
 
 A second staging table was then implemented in the pipeline to appropriately define data types and store clean data as a backup:
 
@@ -126,7 +126,7 @@ CREATE TABLE TESS_SVC_production (
 );
 ```
 
-Finally, we use an INSERT statement to load the clean data into our production table:
+ we use an INSERT statement to load the clean data into our production table:
 
 ```sql
 INSERT INTO TESS_VSC_production
