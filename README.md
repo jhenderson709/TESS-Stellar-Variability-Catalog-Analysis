@@ -9,6 +9,7 @@
   3. Help users develop an intuition about how TESS operates
 
 ## Data Overview
+### Data Pipeline/ETL Process
 
   Nearly all of the data is sourced from a single location: within the Mikulski Archive for Space Telescopes (MAST) website, a popular resource for astronomy-astrophysics, a bulk .csv download is provided for the TESS Variable Star Catalog (TESS VSC), which was [published by the American Astronomical Society in 2024](https://iopscience.iop.org/article/10.3847/1538-4365/acdee5)).
 
@@ -19,7 +20,7 @@ This file contains ~85,000 rows with well over 100 columns. Most of the data are
 In order to start working with the data, I decided to load the data into a personal dedicated MySQL database. First, a table configured for only the most relevant fields was required:
 
 ```sql
-CREATE TABLE TESS_SVC_varchar_staging (
+CREATE TABLE TESS_VSC_varchar_staging (
     tess_id VARCHAR(50),
     TWOMASS VARCHAR(50),
     objType VARCHAR(16),
@@ -53,19 +54,19 @@ With a staging table created, data from the aforementioned .csv could be loaded 
 
 ```sql
 LOAD DATA LOCAL INFILE 'C:\\Program Files\\MySQL\\MySQL Server 9.1\\Uploads\\TESS_VSC.csv'
-INTO TABLE TESS_SVC_varchar_staging
+INTO TABLE TESS_VSC_varchar_staging
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES
 (tess_id, Sector, period_var_1, amp_var_1, power_1, TWOMASS, objType, ra, `dec`, pmRA, e_pmRA, pmDEC, e_pmDEC, Teff, e_Teff, logg, e_logg, rad, e_rad, mass, e_mass, rho, e_rho);
 ```
 
-Now the data could be cleaned; using data manipulation language, nan values were updated to be set equal to null, decimal places were truncated to desired precisions, REGEXP was used to remove undesired spaces and special characters, and some fields were transformed to be more workable. 
+Now, with the data present in MySQL, it could be cleaned; using data manipulation language, nan values were updated to be set equal to null, decimal places were truncated to desired precisions, REGEXP was used to remove undesired spaces and special characters, and some fields were transformed to be more workable. 
 
 A second staging table was then implemented in the pipeline to appropriately define data types and store clean data as a backup:
 
 ```sql
-CREATE TABLE TESS_SVC_datatype_staging AS
+CREATE TABLE TESS_VSC_datatype_staging AS
 SELECT 
     CAST(tess_id AS UNSIGNED INT) AS tess_id,
     TWOMASS,
@@ -127,22 +128,11 @@ CREATE TABLE TESS_SVC_production (
 
 Finally, we use an INSERT statement to load the clean data into our production table:
 
-This defeats the purpose of the below insert statement, does it not? check for best practices.
-
 ```sql
 INSERT INTO TESS_VSC_production
 SELECT * FROM TESS_VSC_datatype_staging
 ```
-
-
-### Data Pipeline/ETL Process
-  The data is sourced from two different locations: ~84,000 rows (stars) from the TESS Variability Catalog ([published by the American Astronomical Society in 2024](https://iopscience.iop.org/article/10.3847/1538-4365/acdee5)), and an additional ~1,000 rows (stars) from my own pulsating star search of sectors 61-68 of TESS data which was matched with corresponding physical parameter data (Temperature, Mass, Radius, etc.) from the TICv8 catalog (via SQL join on unique star identifier). The whole of the data was migrated from .csv files to a MySQL database that I created where only the most relevant fields were stored in a flat file. The data was then cleaned in MySQL Workbench using data manipulation language. Finally, the flat file was loaded into Power BI using an ODBC connector where it was transformed into a star schema.
-
-![TESS_SVC_csv](https://github.com/user-attachments/assets/d16d9cea-c39d-4293-9c75-801b7da5950e)
-
-CREATE TABLE STATEMENT
-(mention cleaning process? i.e. table was first created with all data types set to varchar. then, empty or poor quality cells were turned into null values, and columns were stripped of unnecessary characters using REGEX. Then, data types were appropriately updated to reflect cell values.
-![TESS_VSC_sqlmigration](https://github.com/user-attachments/assets/70c95b42-f2fc-477c-a4cb-0b32c049658f)
+Finally, the flat file was loaded into Power BI using an ODBC connector where it was transformed into a star schema.
 
 MENTIONED IN PAPER PYTHON SCRIPT?
 
