@@ -14,9 +14,9 @@
 
 ![TESS_SVC_csv](https://github.com/user-attachments/assets/d16d9cea-c39d-4293-9c75-801b7da5950e)
 
-This file contains ~85,000 rows with well over 100 columns. Most of the data are numeric values describing physical parameters of stars, measurments describing observational conditions, or text fields helping to identify or denote various stars and data sources.
+This file contains ~85,000 rows with well over 100 columns. Most of the data are numeric values describing physical parameters of stars, measurments describing observational conditions, or text fields helping to identify or denote various star types and data sources.
 
-In order to start working with the data, I decided to load the data into a dedicated MySQL database. First, a table was required to host the data:
+In order to start working with the data, I decided to load the data into a personal dedicated MySQL database. First, a table configured for only the most relevant fields was required:
 
 ```sql
 CREATE TABLE TESS_SVC_varchar_staging (
@@ -60,7 +60,7 @@ IGNORE 1 LINES
 (tess_id, Sector, period_var_1, amp_var_1, power_1, TWOMASS, objType, ra, `dec`, pmRA, e_pmRA, pmDEC, e_pmDEC, Teff, e_Teff, logg, e_logg, rad, e_rad, mass, e_mass, rho, e_rho);
 ```
 
-Now the data could be cleaned; nan values were updated to be set equal to null, decimal places were truncated to desired precisions, REGEXP was used to remove undesired spaces and special characters, and some fields were transformed to be more workable. A second staging table was then implemented in the pipeline to appropriately define data types and store clean data as a backup. Additional CREATE TABLE and LOAD DATA statements were required:
+Now the data could be cleaned; using data manipulation language, nan values were updated to be set equal to null, decimal places were truncated to desired precisions, REGEXP was used to remove undesired spaces and special characters, and some fields were transformed to be more workable. A second staging table was then implemented in the pipeline to appropriately define data types and store clean data as a backup. Additional CREATE TABLE and LOAD DATA statements were required:
 
 ```sql
 CREATE TABLE TESS_SVC_datatype_staging AS
@@ -98,7 +98,7 @@ SELECT * FROM TESS_VSC_datatype_staging
 )
 ```
 This defeats the purpose of the below insert statement, does it not? check for best practices.
-
+Finally, we can insert into
 INSERT INTO PRODUCTION TABLE:
 
 ```sql
@@ -106,78 +106,6 @@ INSERT INTO stars (tic_id, sector_id, star_name, temperature, radius, logg, vari
 SELECT * FROM TESS_SVC_production;
 ```
 
-
-  The whole of the data was migrated from .csv files to a MySQL database that I created where only the most relevant fields were stored in a flat file. The data was then cleaned in MySQL Workbench using data manipulation language. Finally, the flat file was loaded into Power BI using an ODBC connector where it was transformed into a star schema.
-
-First, we load the raw data into a staging table using the following SQL query:
-
-
-```sql
-LOAD DATA LOCAL INFILE 'C:\\Program Files\\MySQL\\MySQL Server 9.1\\Uploads\\TESS_VSC.csv'
-INTO TABLE TESS_SVC_varchar_staging
-FIELDS TERMINATED BY ','
-LINES TERMINATED BY '\n'
-IGNORE 1 LINES
-(tess_id, Sector, period_var_1, amp_var_1, power_1, TWOMASS, objType, ra, `dec`, pmRA, e_pmRA, pmDEC, e_pmDEC, Teff, e_Teff, logg, e_logg, rad, e_rad, mass, e_mass, rho, e_rho);
-```
-
-```sql
-CREATE TABLE TESS_SVC_varchar_staging (
-    tess_id VARCHAR(50),
-    TWOMASS VARCHAR(50),
-    objType VARCHAR(16),
-    Sector VARCHAR(50),
-    Teff VARCHAR(50),
-    e_Teff VARCHAR(50),
-    logg VARCHAR(50),
-    e_logg VARCHAR(50),
-    Rad VARCHAR(50),
-    e_Rad VARCHAR(50),
-    Mass VARCHAR(50),
-    e_Mass VARCHAR(50),
-    Dist VARCHAR(50),
-    e_Dist VARCHAR(50),
-    r_Teff VARCHAR(50),
-    ra VARCHAR(50),
-    `dec` VARCHAR(50),
-    pmRA VARCHAR(50),
-    e_pmRA VARCHAR(50),
-    pmDEC VARCHAR(50),
-    e_pmDEC VARCHAR(50),
-    period_var_1 VARCHAR(50),
-    amp_var_1 VARCHAR(50),
-    power_1 VARCHAR(50)
-);
-```
-```sql
-CREATE TABLE TESS_SVC_datatype_staging AS
-SELECT 
-    CAST(tess_id AS UNSIGNED INT) AS tess_id,
-    TWOMASS,
-    objType,
-    CAST(Sector AS UNSIGNED INT) AS Sector,
-    CAST(Teff AS DECIMAL(10,1)) AS Teff,
-    CAST(e_Teff AS DECIMAL(10,1)) AS e_Teff,
-    CAST(logg AS DECIMAL(8,4)) AS logg,
-    CAST(e_logg AS DECIMAL(8,4)) AS e_logg,
-    CAST(Rad AS DECIMAL(10,3)) AS Rad,
-    CAST(e_Rad AS DECIMAL(10,3)) AS e_Rad,
-    CAST(Mass AS DECIMAL(10,3)) AS Mass,
-    CAST(e_Mass AS DECIMAL(10,3)) AS e_Mass,
-    CAST(Dist AS DECIMAL(10,4)) AS Dist,
-    CAST(e_Dist AS DECIMAL(10,4)) AS e_Dist,
-    r_Teff,
-    CAST(ra AS DECIMAL(20,11)) AS ra,
-    CAST(`dec` AS DECIMAL(20,11)) AS `dec`,
-    CAST(pmRA AS DECIMAL(10,3)) AS pmRA,
-    CAST(e_pmRA AS DECIMAL(10,3)) AS e_pmRA,
-    CAST(pmDEC AS DECIMAL(10,3)) AS pmDEC,
-    CAST(e_pmDEC AS DECIMAL(10,3)) AS e_pmDEC,
-    CAST(period_var_1 AS DECIMAL(10,2)) AS period_var_1,
-    CAST(amp_var_1 AS DECIMAL(10,2)) AS amp_var_1,
-    CAST(power_1 AS DECIMAL(10,3)) AS power_1
-FROM TESS_SVC_varchar_staging;
-```
 
 ### Data Pipeline/ETL Process
   The data is sourced from two different locations: ~84,000 rows (stars) from the TESS Variability Catalog ([published by the American Astronomical Society in 2024](https://iopscience.iop.org/article/10.3847/1538-4365/acdee5)), and an additional ~1,000 rows (stars) from my own pulsating star search of sectors 61-68 of TESS data which was matched with corresponding physical parameter data (Temperature, Mass, Radius, etc.) from the TICv8 catalog (via SQL join on unique star identifier). The whole of the data was migrated from .csv files to a MySQL database that I created where only the most relevant fields were stored in a flat file. The data was then cleaned in MySQL Workbench using data manipulation language. Finally, the flat file was loaded into Power BI using an ODBC connector where it was transformed into a star schema.
