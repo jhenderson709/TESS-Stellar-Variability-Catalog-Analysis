@@ -63,7 +63,11 @@ The gray dots in the Mollweide plot are stars in the data set that have been men
 
 
 ## Executive Summary
-30 second take away with key insights...
+Sector 19 from Year 2 of TESS VSC data has an 11.11% unpublished star population, making it a valuable resource for new research. Notably, 16% of DWARF stars in this sector remain unpublished, while GIANT star researchers may prefer Sectors 10 and 11, where 5% of GIANTS are unpublished.
+
+For pulsation studies, DWARF stars cluster around ~0.05-day periods, while GIANTS peak at ~1.00 days. A-type DWARFs consistently exhibit ~0.03-day periods, whereas GIANTS show broader period distributions. M-type GIANTS are of particular interest due to their anomalous lack of short-period pulsations.
+
+
 
 ## Insights Deep-Dive
 ### Where should researches look for candidate stars for academic papers?
