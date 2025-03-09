@@ -60,7 +60,9 @@ IGNORE 1 LINES
 (tess_id, Sector, period_var_1, amp_var_1, power_1, TWOMASS, objType, ra, `dec`, pmRA, e_pmRA, pmDEC, e_pmDEC, Teff, e_Teff, logg, e_logg, rad, e_rad, mass, e_mass, rho, e_rho);
 ```
 
-Now the data could be cleaned; using data manipulation language, nan values were updated to be set equal to null, decimal places were truncated to desired precisions, REGEXP was used to remove undesired spaces and special characters, and some fields were transformed to be more workable. A second staging table was then implemented in the pipeline to appropriately define data types and store clean data as a backup. Additional CREATE TABLE and LOAD DATA statements were required:
+Now the data could be cleaned; using data manipulation language, nan values were updated to be set equal to null, decimal places were truncated to desired precisions, REGEXP was used to remove undesired spaces and special characters, and some fields were transformed to be more workable. 
+
+A second staging table was then implemented in the pipeline to appropriately define data types and store clean data as a backup:
 
 ```sql
 CREATE TABLE TESS_SVC_datatype_staging AS
@@ -91,19 +93,45 @@ SELECT
     CAST(power_1 AS DECIMAL(10,3)) AS power_1
 FROM TESS_SVC_varchar_staging;
 ```
+A production table was initialized with the same data type configurations as the latter staging table:
 
 ```sql
-CREATE TABLE TESS_SVC_production AS (
-SELECT * FROM TESS_VSC_datatype_staging
-)
+CREATE TABLE TESS_SVC_production (
+    tess_id INT UNSIGNED,
+    TWOMASS VARCHAR(20),
+    objType VARCHAR(50),
+    Sector INT UNSIGNED,
+    Teff DECIMAL(10,1),
+    e_Teff DECIMAL(10,1),
+    logg DECIMAL(8,4),
+    e_logg DECIMAL(8,4),
+    Rad DECIMAL(10,3),
+    e_Rad DECIMAL(10,3),
+    Mass DECIMAL(10,3),
+    e_Mass DECIMAL(10,3),
+    Dist DECIMAL(10,4),
+    e_Dist DECIMAL(10,4),
+    r_Teff VARCHAR(20),
+    ra DECIMAL(20,11),
+    `dec` DECIMAL(20,11),
+    pmRA DECIMAL(10,3),
+    e_pmRA DECIMAL(10,3),
+    pmDEC DECIMAL(10,3),
+    e_pmDEC DECIMAL(10,3),
+    period_var_1 DECIMAL(10,2),
+    amp_var_1 DECIMAL(10,2),
+    power_1 DECIMAL(10,3),
+    PRIMARY KEY (tess_id, Sector)
+);
 ```
+
+Finally, we use an INSERT statement to load the clean data into our production table:
+
 This defeats the purpose of the below insert statement, does it not? check for best practices.
-Finally, we can insert into
-INSERT INTO PRODUCTION TABLE:
 
 ```sql
-INSERT INTO stars (tic_id, sector_id, star_name, temperature, radius, logg, variability_type)
-SELECT * FROM TESS_SVC_production;
+INSERT INTO TESS_VSC_production
+SELECT * FROM TESS_VSC_datatype_staging
 ```
 
 
