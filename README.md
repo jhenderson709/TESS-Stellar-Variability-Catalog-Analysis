@@ -11,7 +11,7 @@
 ## Data Overview
 ### Data Pipeline/ETL Process
 
-  Nearly all of the data is sourced from a single location: within the Mikulski Archive for Space Telescopes (MAST) website, a popular resource for astronomy-astrophysics, a bulk .csv download is provided for the TESS Variable Star Catalog (TESS VSC), which was [published by the American Astronomical Society in 2024](https://iopscience.iop.org/article/10.3847/1538-4365/acdee5)).
+  Nearly all of the data is sourced from a single location: within the Mikulski Archive for Space Telescopes (MAST) website, a popular resource for astronomy-astrophysics, a bulk .csv download is provided for the TESS Variable Star Catalog (TESS VSC), which was [published by the American Astronomical Society in 2023](https://iopscience.iop.org/article/10.3847/1538-4365/acdee5).
 
 ![TESS_SVC_csv](https://github.com/user-attachments/assets/d16d9cea-c39d-4293-9c75-801b7da5950e)
 
