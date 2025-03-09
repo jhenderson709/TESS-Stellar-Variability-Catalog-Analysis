@@ -45,7 +45,7 @@ CREATE TABLE TESS_SVC_varchar_staging (
     amp_var_1 VARCHAR(50),
     power_1 VARCHAR(50)
 );
-
+```
 
 Above is a raw staging table in which all data types are defined as VARCHAR. Given the variety of decimal precision, data types, and special characters, this preliminary stage allows for a quick hands-on approach by which the data can be profiled and better understood. 
 
