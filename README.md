@@ -1,12 +1,17 @@
+# TESS Stellar Variability Catalog Analysis @ ARDASTELLA
 ## Table of Contents
-- [Background and spaghetti](#background-and-overview)
-- [Project Goals](#project-goals)
+- [Background and Overview](#background-and-overview)
+  - [TESS Background](#tess-background-what-is-tess-and-how-does-it-collect-data)
+  - [Asteroseismology](#asteroseismology)
+  - [Project Goals](#project-goals)
 - [Data Overview](#data-overview)
   - [Data Pipeline/ETL Process](#data-pipelineetl-process)
   - [Data Structure Overview](#data-structure-overview)
-- [TESS Background](#tess-background-what-is-tess-and-how-does-it-collect-data)
 - [Executive Summary](#executive-summary)
 - [Insights Deep-Dive](#insights-deep-dive)
+  - [Publshed/Unpublished Stars](#Where-should-researches-look-for-candidate-stars-for-academic-papers?)
+  - [Pulsations](#Pulsation-Period-Distribution-and-Filtering;-_Where-should-we-look-for-pulsations?)
+    
 
 # TESS Stellar Variability Catalog Analysis @ ARDASTELLA
 ![Ardastella_logo](https://github.com/user-attachments/assets/9b2b480b-0743-43da-a0c6-7212f9db9e1a)
@@ -31,6 +36,7 @@ The TESS Variable Star Catalog worked to identify as many variable stars as poss
 
 The gray dots in the Mollweide plot are stars in the data set that have been mentioned in academic papers. Indigo/purple dots in the plot are stars that have not yet been mentioned in academic papers. These are the stars we are most interested in; if upon further study these stars reveal something new, interesting, or useful for existing mathematical models, an academic paper can be drafted about them. The blank curved gap inbetween hemispheres represents zones not viewed by TESS – while described as an "all-sky survey," in reality, only ~85% of the sky is observed in a two year cycle.
 
+### Asteroseismology
 
 ### Project Goals
   1. Object profiling: To partition stars, and their observational data, into groups to based on location data, physical parameters, and pulsation data to expidite the search for candidate stars for further study. Determine which locations contain the most stars that have not been published in scientific literature?
