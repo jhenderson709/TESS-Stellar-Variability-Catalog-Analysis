@@ -53,7 +53,7 @@ The gray dots in the Mollweide plot are stars in the data set that have been men
 
 This file contains ~85,000 rows with well over 100 columns. Most of the data are numeric values describing physical parameters of stars, measurments describing observational conditions, or text fields helping to identify or denote various star types and data sources.
 
-In order to start working with the data, I decided to load the .csv into a personal dedicated MySQL database. First, a table configured for only the most relevant fields was required:
+In order to start working with the data, I decided to load the .csv into a personal dedicated MySQL database. First, a table configured for only the most relevant fields was required (some fields were renamed for personal preference/clarity):
 
 ```sql
 CREATE TABLE TESS_VSC_varchar_staging (
