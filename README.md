@@ -1,3 +1,13 @@
+## Table of Contents
+- [Background and Overview](#background-and-overview)
+- [Project Goals](#project-goals)
+- [Data Overview](#data-overview)
+  - [Data Pipeline/ETL Process](#data-pipelineetl-process)
+  - [Data Structure Overview](#data-structure-overview)
+- [TESS Background](#tess-background-what-is-tess-and-how-does-it-collect-data)
+- [Executive Summary](#executive-summary)
+- [Insights Deep-Dive](#insights-deep-dive)
+
 # TESS Stellar Variability Catalog Analysis @ ARDASTELLA
 ![Ardastella_logo](https://github.com/user-attachments/assets/9b2b480b-0743-43da-a0c6-7212f9db9e1a)
 ## Background and Overview
