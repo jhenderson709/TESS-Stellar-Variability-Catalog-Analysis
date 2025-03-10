@@ -57,10 +57,10 @@ In order to start working with the data, I decided to load the .csv into a perso
 
 ```sql
 CREATE TABLE TESS_VSC_varchar_staging (
-    tess_id VARCHAR(50),
-    TWOMASS VARCHAR(50),
-    objType VARCHAR(50),
-    Sector VARCHAR(50),
+    TIC VARCHAR(50),
+    catalog_name VARCHAR(50),
+    stellar_class VARCHAR(50),
+    sector_id VARCHAR(50),
     Teff VARCHAR(50),
     e_Teff VARCHAR(50),
     logg VARCHAR(50),
@@ -72,14 +72,14 @@ CREATE TABLE TESS_VSC_varchar_staging (
     Dist VARCHAR(50),
     e_Dist VARCHAR(50),
     r_Teff VARCHAR(50),
-    ra VARCHAR(50),
-    `dec` VARCHAR(50),
+    RAJ2000 VARCHAR(50),
+    DEJ2000 VARCHAR(50),
     pmRA VARCHAR(50),
     e_pmRA VARCHAR(50),
-    pmDEC VARCHAR(50),
-    e_pmDEC VARCHAR(50),
-    period_var_1 VARCHAR(50),
-    amp_var_1 VARCHAR(50),
+    pmDE VARCHAR(50),
+    e_pmDE VARCHAR(50),
+    max_pulsation VARCHAR(50),
+    amplitude_1 VARCHAR(50),
     power_1 VARCHAR(50)
 );
 ```
@@ -104,10 +104,10 @@ A second staging table was then implemented in the pipeline to appropriately def
 ```sql
 CREATE TABLE TESS_VSC_datatype_staging AS
 SELECT 
-    CAST(tess_id AS UNSIGNED INT) AS tess_id,
-    TWOMASS,
-    objType,
-    CAST(Sector AS UNSIGNED INT) AS Sector,
+    CAST(TIC AS UNSIGNED INT) AS TIC,
+    catalog_name,
+    stellar_class,
+    CAST(sector_id AS UNSIGNED INT) AS sector_id,
     CAST(Teff AS DECIMAL(10,1)) AS Teff,
     CAST(e_Teff AS DECIMAL(10,1)) AS e_Teff,
     CAST(logg AS DECIMAL(8,4)) AS logg,
@@ -119,25 +119,25 @@ SELECT
     CAST(Dist AS DECIMAL(10,4)) AS Dist,
     CAST(e_Dist AS DECIMAL(10,4)) AS e_Dist,
     r_Teff,
-    CAST(ra AS DECIMAL(20,11)) AS ra,
-    CAST(`dec` AS DECIMAL(20,11)) AS `dec`,
+    CAST(RAJ2000 AS DECIMAL(20,11)) AS RAJ2000,
+    CAST(DEJ2000 AS DECIMAL(20,11)) AS DEJ2000,
     CAST(pmRA AS DECIMAL(10,3)) AS pmRA,
     CAST(e_pmRA AS DECIMAL(10,3)) AS e_pmRA,
-    CAST(pmDEC AS DECIMAL(10,3)) AS pmDEC,
-    CAST(e_pmDEC AS DECIMAL(10,3)) AS e_pmDEC,
-    CAST(period_var_1 AS DECIMAL(10,2)) AS period_var_1,
-    CAST(amp_var_1 AS DECIMAL(10,2)) AS amp_var_1,
+    CAST(pmDE AS DECIMAL(10,3)) AS pmDE,
+    CAST(e_pmDE AS DECIMAL(10,3)) AS e_pmDE,
+    CAST(max_pulsation AS DECIMAL(10,2)) AS max_pulsation,
+    CAST(amplitude_1 AS DECIMAL(10,2)) AS amplitude_1,
     CAST(power_1 AS DECIMAL(10,3)) AS power_1
-FROM TESS_SVC_varchar_staging;
+FROM TESS_VSC_varchar_staging;
 ```
 A production table was initialized with the same data type configurations as the latter staging table:
 
 ```sql
-CREATE TABLE TESS_SVC_production (
-    tess_id INT UNSIGNED,
-    TWOMASS VARCHAR(20),
-    objType VARCHAR(50),
-    Sector INT UNSIGNED,
+CREATE TABLE TESS_VSC_production (
+    TIC INT UNSIGNED,
+    catalog_name VARCHAR(50),
+    stellar_class VARCHAR(50),
+    sector_id INT UNSIGNED,
     Teff DECIMAL(10,1),
     e_Teff DECIMAL(10,1),
     logg DECIMAL(8,4),
@@ -148,17 +148,17 @@ CREATE TABLE TESS_SVC_production (
     e_Mass DECIMAL(10,3),
     Dist DECIMAL(10,4),
     e_Dist DECIMAL(10,4),
-    r_Teff VARCHAR(20),
-    ra DECIMAL(20,11),
-    `dec` DECIMAL(20,11),
+    r_Teff VARCHAR(50),
+    RAJ2000 DECIMAL(20,11),
+    DEJ2000 DECIMAL(20,11),
     pmRA DECIMAL(10,3),
     e_pmRA DECIMAL(10,3),
-    pmDEC DECIMAL(10,3),
-    e_pmDEC DECIMAL(10,3),
-    period_var_1 DECIMAL(10,2),
-    amp_var_1 DECIMAL(10,2),
+    pmDE DECIMAL(10,3),
+    e_pmDE DECIMAL(10,3),
+    max_pulsation DECIMAL(10,2),
+    amplitude_1 DECIMAL(10,2),
     power_1 DECIMAL(10,3),
-    PRIMARY KEY (tess_id, Sector)
+    PRIMARY KEY (TIC, sector_id)
 );
 ```
 
