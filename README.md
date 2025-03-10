@@ -39,7 +39,9 @@ The gray dots in the Mollweide plot are stars in the data set that have been men
 
 ### Asteroseismology
 "Asteroseismology is the determination of the interior structures of stars by using their oscillations as seismic waves" (Handler, G 2013). In other words, asteroseismology is the study of vibrations inside stars. Just like how earthquakes cause seismic waves to travel through the Earth, which scientists use to study our planet’s interior, similar waves travel through stars, revealing what’s happening beneath their surfaces.
-![asterosesimology_demo](https://github.com/user-attachments/assets/2672ede9-659d-4ac0-9066-c3e2e8a69fc0)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/2672ede9-659d-4ac0-9066-c3e2e8a69fc0">
+</p>
 
 Think of a star like a musical instrument. When you pluck a guitar string or tap a drum, it vibrates at different frequencies, producing sound. These vibrations depend on the size, shape, and material of the instrument. In the same way, a star’s physical parameters–such as its size, temperature, and composition—affect the way it oscillates. By analyzing these oscillations, astronomers can infer what’s inside the star, even though they can't see it directly.
 
