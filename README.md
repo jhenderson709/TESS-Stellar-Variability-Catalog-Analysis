@@ -9,8 +9,9 @@
   - [Data Structure Overview](#data-structure-overview)
 - [Executive Summary](#executive-summary)
 - [Insights Deep-Dive](#insights-deep-dive)
-  - [Publshed/Unpublished Stars](#Where-should-researches-look-for-candidate-stars-for-academic-papers?)
-  - [Pulsations](#Pulsation-Period-Distribution-and-Filtering;-_Where-should-we-look-for-pulsations?)
+  - [Published/Unpublished Stars](#where-should-researchers-look-for-candidate-stars-for-academic-papers?)
+  - [Pulsations](#pulsation-period-distribution-and-filtering-where-should-we-look-for-pulsations)
+
     
 
 # TESS Stellar Variability Catalog Analysis @ ARDASTELLA
