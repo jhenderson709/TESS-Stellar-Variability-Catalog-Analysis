@@ -9,7 +9,7 @@
   - [Data Structure Overview](#data-structure-overview)
 - [Executive Summary](#executive-summary)
 - [Insights Deep-Dive](#insights-deep-dive)
-  - [Published/Unpublished Stars](#where-should-researchers-look-for-candidate-stars-for-academic-papers?)
+  - [Published/Unpublished Stars](#where-should-researchers-look-for-candidate-stars-for-academic-papers)
   - [Pulsations](#pulsation-period-distribution-and-filtering-where-should-we-look-for-pulsations)
 
     
