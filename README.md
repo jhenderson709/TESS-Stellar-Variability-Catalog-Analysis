@@ -18,7 +18,9 @@
 ![Ardastella_logo](https://github.com/user-attachments/assets/9b2b480b-0743-43da-a0c6-7212f9db9e1a)
 ## Background and Overview
   ARDASTELLA is a research group consisting of University faculty, PhD students, and international collaborators working on pulsating stars. They specialize in Telescope Operations Planning for astronomical observatories and publishing within Astrophysics and Astronomy literature. Recommendations will be used by research leads and telescope operators to better allocate research team and observatory resources. Insights are delivered to Research and Project managers. 
+<br/><br/>
 
+##
 ### TESS Background; What is TESS, and how does it collect data?
 The Transiting Exoplanet Survey Satellite (TESS) is a space telescope in Earth's orbit that has been a prolific source of astronomical data since its launch in 2018. While ostensibly intended for the discovery of exoplanets, its collection of time-series photometric data has been a valuable asset to scholars of stellar pulsations – asteroseismologists – following the retirement of the Kepler space telescope. TESS has four identical 24x24 degree field of view cameras that are ordered in such a way to form a composite 24x96 degree field of view [13]. This 24x96 degree slice of sky is called a sector. Each ecliptic hemisphere of the sky is composed of 13 adjacent and partially overlapping sectors. To collect data, TESS is pointed at one sector and observes it (almost) continuously with various sampling rates for 27.4 days before it is directed at the next adjacent sector. The 13 sector survey takes a year to complete, after which the telescope shifts its field of view to the opposite hemisphere for observation of another series of 13 sectors. When both ecliptic hemispheres have been surveyed, TESS shifts its field of view again to the previously observed hemisphere at which point it will take new data of previously observed sectors. If a sector is called sector 1 when TESS observes it for the first time, when the telescope returns to that sector in its respective hemisphere two years later, it will be called sector 27.
 <p align="center">
@@ -36,7 +38,9 @@ The TESS Variable Star Catalog worked to identify as many variable stars as poss
 > This graph, and the one above it, are Mollweide projections – a way of drawing the entire surface of a round object, like Earth or the night sky, onto a flat oval shape. In this case, I have taken equatorial coordinates (Right Ascension and Declination), which describe the location of objects in space on the celestial sphere, and performed numerous tranformations on them to plot them appropriately. _Note:_ due to the volume of data points (~85,000) Power BI is showing "a subset that defines the shape and the outliers".
 
 The gray dots in the Mollweide plot are stars in the data set that have been mentioned in academic papers. Indigo/purple dots in the plot are stars that have not yet been mentioned in academic papers. These are the stars we are most interested in; if upon further study these stars reveal something new, interesting, or useful for existing mathematical models, an academic paper can be drafted about them. The blank curved gap inbetween hemispheres represents zones not viewed by TESS – while described as an "all-sky survey," in reality, only ~85% of the sky is observed in a two year cycle.
+<br/><br/>
 
+##
 ### Asteroseismology
 "Asteroseismology is the determination of the interior structures of stars by using their oscillations as seismic waves" (Handler, G 2013). In other words, asteroseismology is the study of vibrations inside stars. Just like how earthquakes cause seismic waves to travel through the Earth, which scientists use to study our planet’s interior, similar waves travel through stars, revealing what’s happening beneath their surfaces. Think of a star like a musical instrument. When you pluck a guitar string or strike a drum, it vibrates at different frequencies, producing sound. These vibrations depend on the size, shape, and material of the instrument. In the same way, a star’s physical parameters–such as its size, temperature, and composition—affect the way it oscillates. Now, imagine you have a drum that, when struck, gently swells and gets louder, until a maximum, at which point, it shrinks and gets softer–this is more like a stellar pulsation, and the volume level is like the brightness of the star.
 <p align="center">
@@ -191,8 +195,7 @@ The data is comprised of several key aspects of interest to our researchers:
   3. Location Data: details the location of stars in the sky – attributes such as celestial coordinates, distance from observer, and indicators of whether the an object's position will change over time. Why relevant?
   4. Stellar Classifications: contains descriptors from the data sources that suggest what class/type of star a given object is, and from what instrument the classification comes from. Provides useful groupings by which researchers can analyze subsets of the data.
      
-
-![Data_model_outdated](https://github.com/user-attachments/assets/828c9e5b-3b35-4770-b96a-d36cfe93aa65)
+![semantic_model_rework](https://github.com/user-attachments/assets/0dc5074b-09ae-416a-9af1-f286b095c9f6)
 > A screenshot of the semantic model as it exists within Power BI.
 <br/><br/>
 
