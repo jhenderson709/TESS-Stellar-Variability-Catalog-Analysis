@@ -23,15 +23,15 @@
 ##
 ### TESS Background; What is TESS, and how does it collect data?
 
-The Transiting Exoplanet Survey Satellite (TESS) is a space telescope in Earth's orbit that has been a prolific source of astronomical data since its launch in 2018. While ostensibly intended for the discovery of exoplanets, its collection of time-series photometric data has been a valuable asset to scholars of stellar pulsations – asteroseismologists – following the retirement of the Kepler space telescope. TESS has four identical 24x24 degree field of view cameras that are ordered in such a way to form a composite 24x96 degree field of view [13]. This 24x96 degree slice of sky is called a sector. Each ecliptic hemisphere of the sky is composed of 13 adjacent and partially overlapping sectors. To collect data, TESS is pointed at one sector and observes it (almost) continuously with various sampling rates for 27.4 days before it is directed at the next adjacent sector. The 13 sector survey takes a year to complete, after which the telescope shifts its field of view to the opposite hemisphere for observation of another series of 13 sectors. When both ecliptic hemispheres have been surveyed, TESS shifts its field of view again to the previously observed hemisphere at which point it will take new data of previously observed sectors. If a sector is called sector 1 when TESS observes it for the first time, when the telescope returns to that sector in its respective hemisphere two years later, it will be called sector 27.
+The Transiting Exoplanet Survey Satellite (TESS) is a space telescope in Earth's orbit that has been a prolific source of astronomical data since its launch in 2018. While ostensibly intended for the discovery of exoplanets, its collection of time-series photometric data has been a valuable asset to scholars of stellar pulsations – asteroseismologists – following the retirement of the Kepler space telescope. TESS has four identical 24x24 degree field of view cameras that are ordered in such a way to form a composite 24x96 degree field of view. This 24x96 degree slice of sky is called a sector. Each ecliptic hemisphere of the sky is composed of 13 adjacent and partially overlapping sectors. To collect data, TESS is pointed at one sector and observes it (almost) continuously with various sampling rates for 27.4 days before it is directed at the next adjacent sector. The 13 sector survey takes a year to complete, after which the telescope shifts its field of view to the opposite hemisphere for observation of another series of 13 sectors. When both ecliptic hemispheres have been surveyed, TESS shifts its field of view again to the previously observed hemisphere at which point it will take new data of previously observed sectors. If a sector is called sector 1 when TESS observes it for the first time, when the telescope returns to that sector in its respective hemisphere two years later, it will be called sector 27.
 <p align="center">
   <img src="https://github.com/user-attachments/assets/28a09eff-b35e-40c0-ae1f-7cfb85d89d0b">
 </p>
 
-> A demonstration of how TESS samples the night sky using data from the the TESS Variable Star Catalog. Each frame represents one sector of data from TESS' point of view. Note how the sectors flip from one hemisphere to the other – this change in polarity represents a new year of observations.
+> A demonstration of how TESS samples the night sky using data from the the TESS Variable Star Catalog. Each frame represents one sector of data from TESS' point of view. Note how the sectors flip from one hemisphere to the other – this change represents a new year of observations.
 
 
-The TESS Variable Star Catalog worked to identify as many variable stars as possible within the first two years of TESS observations. Because TESS takes two years to complete its 'all-sky' survey cycle, we have access to nearly all known variable stars observed by TESS (except those that slipped through the crack initially, but appear in later cycles) in our data set. The visualization below is configured to show all TESS VSC data for the first two years of the mission concurrently:
+The TESS Variable Star Catalog worked to identify as many variable stars as possible within the first two years of TESS observations. Because TESS takes two years to complete its 'all-sky' survey cycle, we have access to most all known variable stars observed by TESS in our data set. The visualization below is configured to show all TESS VSC data for the first two years of the mission concurrently:
 <p align="center">
   <img src="https://github.com/user-attachments/assets/1dbb5a90-880f-471f-bc18-d7ba3c580af6">
 </p>
@@ -118,7 +118,7 @@ IGNORE 1 LINES
 
 Now the data could be cleaned; using data manipulation language, nan values were updated to be set equal to null, decimal places were truncated to desired precisions, REGEXP was used to remove undesired spaces and special characters, and some fields were transformed to be more workable. 
 
-A second staging table was then implemented in the pipeline to appropriately define data types and store clean data as a backup:
+A second staging table was then implemented in the pipeline to appropriately define data types and act as a fail-safe, preserving a finalized version of the cleaned data:
 
 ```sql
 CREATE TABLE TESS_VSC_datatype_staging AS
@@ -149,8 +149,7 @@ SELECT
     CAST(power_1 AS DECIMAL(10,3)) AS power_1
 FROM TESS_VSC_varchar_staging;
 ```
-With the data cleaned, a production table was needed?
-A production table was initialized with the same data type configurations as the latter staging table:
+With the data cleaned and structured, a production table was created to ensure data integrity and provide a stable dataset for analysis in Power BI. Unlike the staging tables, which facilitate transformation and validation, the production table serves as the final authoritative source for visualization and reporting:
 
 ```sql
 CREATE TABLE TESS_VSC_production (
@@ -182,13 +181,14 @@ CREATE TABLE TESS_VSC_production (
 );
 ```
 
- we use an INSERT statement to load the clean data into our production table:
+Finally, an INSERT statement is used to load the clean data into our production table:
 
 ```sql
 INSERT INTO TESS_VSC_production
 SELECT * FROM TESS_VSC_datatype_staging
 ```
-Finally, the flat file was loaded into Power BI using an ODBC connector where it was transformed into a star schema.
+
+The resultant flat file was loaded into Power BI using an ODBC connector where it was transformed into a star schema: In Power Query, reference tables were created from the source data and stripped down to fields pertaining to specific entities. To optimize performance, data redundancy was minimized by removing duplicate values, clustered indexes were created to improve query efficiency, and primary/foreign key relationships were established between tables to maintain referential integrity.
 
 MENTIONED IN PAPER PYTHON SCRIPT?
 <br/><br/>
