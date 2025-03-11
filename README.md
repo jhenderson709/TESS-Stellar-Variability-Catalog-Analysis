@@ -57,9 +57,9 @@ Though beyond the scope of this project, the ultimate function of pulsations sho
 
 ##
 ### Project Goals
-  1. Object profiling: To partition stars and their observational data into meaningful groups based on location, physical parameters, and pulsation characteristics. The goal is to streamline the identification of promising candidate stars for further study. This involves determining which regions of the sky contain the largest concentrations of stars that have yet to be explored or published in scientific literature, thus enabling a more focused and efficient search for novel variable stars.
-  2. Pulsation Cohorts and Emergent Patterns: To uncover correlations between a star’s physical parameters (such as mass, temperature, radius) and its pulsation characteristics (such as pulsation period, amplitude, and power). By analyzing these relationships, the project aims to provide research teams with data-driven heuristics that can significantly expedite the process of identifying variable stars within large datasets. This would reduce the time and effort required for variable star searches, particularly in massive datasets like those from TESS.
-  3. Enhancing Understanding of TESS Observations: To equip users with a deeper intuition and understanding of how the TESS mission operates, including its observational strategies, limitations, and the types of data it provides. This will help researchers interpret TESS data more effectively and develop strategies for future observational campaigns.
+  1. _Object profiling:_ To partition stars and their observational data into meaningful groups based on location, physical parameters, and pulsation characteristics. The goal is to streamline the identification of promising candidate stars for further study. This involves determining which regions of the sky contain the largest concentrations of stars that have yet to be published in scientific literature, thus enabling a more focused and efficient search for variable stars for further study.
+  2. _Pulsation Cohorts and Emergent Patterns:_ To uncover correlations between a star’s physical parameters (such as mass, temperature, radius) and its pulsation characteristics (such as pulsation period, amplitude, and power). By analyzing these relationships, the project aims to provide research teams with data-driven heuristics that can significantly expedite the process of identifying variable stars, or pulsations within knows variable stars, within large datasets. This would reduce the time and effort required for variable star searches and period spacing searches, particularly in massive datasets like those from TESS.
+  3. _Enhancing Understanding of TESS Observations:_ To equip users with a deeper intuition and understanding of how the TESS mission operates, including its observational strategies, limitations, and the types of data it provides. This will help researchers interpret TESS data more effectively and develop strategies for future observational campaigns.
 <br/><br/>
 
 
@@ -72,7 +72,7 @@ Though beyond the scope of this project, the ultimate function of pulsations sho
 
 This file contains ~85,000 rows with well over 100 columns. Most of the data are numeric values describing physical parameters of stars, measurments describing observational conditions, or text fields helping to identify or denote various star types and data sources.
 
-In order to start working with the data, I decided to load the .csv into a personal dedicated MySQL database. First, a table configured for only the most relevant fields was required (some fields were renamed for personal preference/clarity):
+In order to start working with the data, the .csv was loaded into a personal dedicated MySQL database. First, a table configured for only the most relevant fields was required (some fields were renamed for personal preference/clarity):
 
 ```sql
 CREATE TABLE TESS_VSC_varchar_staging (
@@ -214,8 +214,8 @@ For pulsation studies, DWARF stars cluster around ~0.05-day periods, while GIANT
 
 
 ## Insights Deep-Dive
-### Where should researchers look for candidate stars for academic papers?
-In order to make best use of team resources, we want to direct attention to those sectors of the sky which have the highest percentages of unpublished stars. Once this has been determined, researchers will be recommended to said sectors to conduct period spacing searches on known variable stars(?). However, ideal sectors may vary depeding on one's research objectives. For example: where should one look if they are hoping to publish on stars within a specific year of TESS observations? What sector should one examine if they are focused on publishing on pulsating GIANT stars? Pulsating DWARF stars? The dynamic filtering functionality implemented into the below dashboards allow team members to answer these questions.
+### Where Should Researchers Look for Candidate Stars for Academic Papers?
+To best allocate team resources, we aim to focus on the sectors of the sky which have the highest percentages of unpublished stars. By identifying these areas, we can recommend specific sectors for researchers to target in their search for unpublished variable stars for further study. However, ideal sectors may vary depending on one's research objectives. For example, researchers interested in publishing on stars from a particular year of TESS observations or on specific types of pulsating stars (e.g., giant or dwarf stars) may prioritize different sectors. The dynamic filtering functionality in the dashboards below allows team members to tailor their search based on these specific research objectives.
 <br/><br/>
 
 ##
