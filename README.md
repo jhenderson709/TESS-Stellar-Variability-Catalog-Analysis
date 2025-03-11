@@ -23,8 +23,6 @@
 ##
 ### TESS Background; What is TESS, and how does it collect data?
 
-![TESS_picture](https://github.com/user-attachments/assets/89212b57-baba-47de-9689-2ebd3851f92d)
-
 The Transiting Exoplanet Survey Satellite (TESS) is a space telescope in Earth's orbit that has been a prolific source of astronomical data since its launch in 2018. While ostensibly intended for the discovery of exoplanets, its collection of time-series photometric data has been a valuable asset to scholars of stellar pulsations – asteroseismologists – following the retirement of the Kepler space telescope. TESS has four identical 24x24 degree field of view cameras that are ordered in such a way to form a composite 24x96 degree field of view [13]. This 24x96 degree slice of sky is called a sector. Each ecliptic hemisphere of the sky is composed of 13 adjacent and partially overlapping sectors. To collect data, TESS is pointed at one sector and observes it (almost) continuously with various sampling rates for 27.4 days before it is directed at the next adjacent sector. The 13 sector survey takes a year to complete, after which the telescope shifts its field of view to the opposite hemisphere for observation of another series of 13 sectors. When both ecliptic hemispheres have been surveyed, TESS shifts its field of view again to the previously observed hemisphere at which point it will take new data of previously observed sectors. If a sector is called sector 1 when TESS observes it for the first time, when the telescope returns to that sector in its respective hemisphere two years later, it will be called sector 27.
 <p align="center">
   <img src="https://github.com/user-attachments/assets/28a09eff-b35e-40c0-ae1f-7cfb85d89d0b">
@@ -50,7 +48,7 @@ The gray dots in the Mollweide plot are stars in the data set that have been men
   <img src="https://github.com/user-attachments/assets/2672ede9-659d-4ac0-9066-c3e2e8a69fc0">
 </p>
 
-> An exaggerated model of how stars can physically expand and contract, resulting in observable pulsations. This example utilizes [spherical harmonics](https://en.wikipedia.org/wiki/Spherical_harmonics), also known as n, l, m geometry, to model the oscillations. 
+> An exaggerated model of how stars can physically expand and contract, resulting in observable pulsations. This example utilizes [spherical harmonics](https://en.wikipedia.org/wiki/Spherical_harmonics), also known as n, l, m geometry, to model the oscillations [(.gif credit)](https://commons.wikimedia.org/wiki/File:Y_l4m2.gif).
 
 Deriving stellar pulsations is made possible by identifying and analyzing variable light signatures in the time-series light data (light curves) of stars observed by high-end telescopes like TESS. If periodicity is present in a star's light curve, Fourier analysis (a mathematical transformation of time-series data) will reveal a corresponding amplitude peak–a pulsation candidate–in the amplitude-frequency domain; an amplitude peak represents a frequency at which the star's pulsations are most prominent. If a given peak is vetted for noise and contamination considerations and is determined to be of sufficient amplitude, the amplitude peak can be called a pulsation and the star to which it belongs can be distinguished as a variable star.
 
