@@ -221,38 +221,39 @@ To best allocate team resources, we aim to focus on the sectors of the sky which
 ##
 **1a. Slicing by Year: _Year 1_**
 
-Year 1 observations comprise sector IDs 1 - 13. These sectors encompass the southern hemisphere of TESS' field of view:
+Year 1 observations comprise sector IDs 1 - 13. These sectors occupy the southern hemisphere of TESS' field of view:
 
 ![TESS_all_year1](https://github.com/user-attachments/assets/7838b5ae-aa91-49e3-ae13-fe98cdadb6f3)
 * The top 5 sectors IDs in year 1 with the largest percentages of unpublished variable stars are as follows: 10 (9%), 7 (8%), 11 (7%), 6 (7%), 3 (7%).
 * Year 1 observations contain the 3 most published sectors in the dataset; only 2% of sector 1 stars are unpublished verified variable stars, while sectors 13 and 4 have 4% and 5% respectively.
 * While there are more unpublished stars within this data, their are fewer unpublished stars when compared to year 2 proportionally.
+* A significant percentage of stars within Year 1 observations–almost 10%–were not attributed a useful spectral designation.
 <br/><br/>
 
 **1b. Slicing by Year: _Year 2_**
 
-Year 2 observations comprise sector IDs 14 - 26. These sectors encompass the northern hemisphere of TESS' field of view:
+Year 2 observations comprise sector IDs 14 - 26. These sectors occupy the northern hemisphere of TESS' field of view:
 
 ![TESS_all_year2](https://github.com/user-attachments/assets/680286cd-983a-4632-965a-4affef644f17)
 * The top 5 sectors IDs in year 2 with the largest percentages of unpublished variable stars are as follows: 19 (11%), 24 (10%), 18 (8%), 17 (7%), 16 (7%).
 * Sector 19 has the highest percentage of unpublished variable stars across the whole data set: 11.11%
-* Proportionally, Year 2 observations have a greater porportion of DWARF stars across all of its sectors when compared to Year 1.
+* Year 2 observations have a greater porportion of DWARF stars across all of its sectors when compared to Year 1.
 <br/><br/>
 
 ##
 **2a. Slicing by Spectral Designation: _DWARF_**
 
 ![TESS_DWARF_VSC](https://github.com/user-attachments/assets/ae246d66-49e0-4cdf-94f9-70862e5f2fdf)
-* DWARF stars are common in the dataset – they account for 64% of stars in the catlog. 
-* DWARF stars are much less published than giants
-* Sector 19 DWARF stars are 16% unpublished!
+* DWARF stars are common in the dataset – they account for 64% of stars in the TESS VSC. 
+* DWARF stars are much less published than giants, with many sectors at or around 10% of its stars unpublished.
+* Sector 19 DWARF stars are 16% unpublished, representing the highest percentage of unpublished stars of any subset of the data.
 <br/><br/>
 
 **2b. Slicing by Spectral Designation: _GIANT_**
 
 ![TESS_GIANT_VSC](https://github.com/user-attachments/assets/c10545bd-1eb3-4cce-847d-fb486bdaebc7)
 * GIANT stars are less common in any stellar population, and that proves true in the TESS VSC. 29% of stars in the data set are GIANT stars.
-* GIANT stars within the data have been thouroughly examined. Many sectors have 99% of their GIANT stars featured in a publication already.
+* GIANT stars within the data have been thouroughly examined. Many sectors have ~99% of their GIANT stars featured in a publication already.
 * Sector 10 has the highest percenatage of unpublished GIANT stars: 5%
 
 ##
