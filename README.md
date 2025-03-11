@@ -149,6 +149,7 @@ SELECT
     CAST(power_1 AS DECIMAL(10,3)) AS power_1
 FROM TESS_VSC_varchar_staging;
 ```
+With the data cleaned, a production table was needed?
 A production table was initialized with the same data type configurations as the latter staging table:
 
 ```sql
