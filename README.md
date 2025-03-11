@@ -42,7 +42,8 @@ The gray dots in the Mollweide plot are stars in the data set that have been men
 <p align="center">
   <img src="https://github.com/user-attachments/assets/2672ede9-659d-4ac0-9066-c3e2e8a69fc0">
 </p>
-> A schematic diagram of stellar pulsations showing the variation in brightness over time.
+
+> An exaggerated model of how stars can physically expand and contract, resulting in observable pulsations. This example utilizes [spherical harmonics](https://en.wikipedia.org/wiki/Spherical_harmonics), also known as n, l, m geometry, to model the oscillations. 
 
 Deriving stellar pulsations is made possible by identifying and analyzing variable light signatures in the time-series light data (light curves) of stars observed by high-end telescopes like TESS. If periodicity is present in a star's light curve, Fourier analysis (a mathematical transformation of time-series data) will reveal a corresponding amplitude peak–a pulsation candidate–in the amplitude-frequency domain. If a given peak is vetted for noise and contamination considerations and is determined to be of sufficient amplitude, the amplitude peak can be called a pulsation and the star to which it belongs can be distinguished as a variable star.
 
