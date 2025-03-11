@@ -52,13 +52,15 @@ The gray dots in the Mollweide plot are stars in the data set that have been men
 Deriving stellar pulsations is made possible by identifying and analyzing variable light signatures in the time-series light data (light curves) of stars observed by high-end telescopes like TESS. If periodicity is present in a star's light curve, Fourier analysis (a mathematical transformation of time-series data) will reveal a corresponding amplitude peak–a pulsation candidate–in the amplitude-frequency domain; an amplitude peak represents a frequency at which the star's pulsations are most prominent. If a given peak is vetted for noise and contamination considerations and is determined to be of sufficient amplitude, the amplitude peak can be called a pulsation and the star to which it belongs can be distinguished as a variable star.
 
 Though beyond the scope of this project, the ultimate function of pulsations should be mentioned: Physical parameters of a star, such as surface temperature, gravity, mass, and luminosity, experience some degree of instability. In the case of variable stars, this instability is related to the pulsation period. Each pulsation period corresponds to a specific n, l, m geometry (spherical harmonics), allowing us to use these geometries to constrain free parameters—physical properties of the star that cannot be directly observed but can be inferred. These modes or patterns of oscillation are key to understanding the star’s internal structure. As we analyze the pulsation geometry for each mode detected, we narrow down the range of possible solutions for the star’s structure. Crucially, there is only one true stellar structure for a given object, and this work aims to bring us closer to identifying that structure for the stars discussed.
+<br/><br/>
 
-
-
+##
 ### Project Goals
   1. Object profiling: To partition stars, and their observational data, into groups to based on location data, physical parameters, and pulsation data to expidite the search for candidate stars for further study. Determine which locations contain the most stars that have not been published in scientific literature?
   2. Pulsation Cohorts and Emergent Patterns: To detmermine correlations between the physical parameters of a star and its pulsation data. Variable star searches within large volumes of data is very time consuming. We aim to equip research teams with heuristics derived from analysis that will inform and expedite their variable star searches.
   3. Help users develop an intuition about how TESS operates
+<br/><br/>
+
 
 ## Data Overview
 ### Data Pipeline/ETL Process
@@ -187,7 +189,9 @@ SELECT * FROM TESS_VSC_datatype_staging
 Finally, the flat file was loaded into Power BI using an ODBC connector where it was transformed into a star schema.
 
 MENTIONED IN PAPER PYTHON SCRIPT?
+<br/><br/>
 
+##
 ### Data Structure Overview
 The data is comprised of several key aspects of interest to our researchers:
   1. Pulsation data: details whether a star has been attributed an identified pulsation, the period of the pulsation, and other characteristics associated with the strength, cause, and confidence level of the pulsation. Why relevant?
@@ -199,12 +203,12 @@ The data is comprised of several key aspects of interest to our researchers:
 > A screenshot of the semantic model as it exists within Power BI.
 <br/><br/>
 
-
+##
 ## Executive Summary
 Sector 19 from Year 2 of TESS VSC data has an 11.11% unpublished star population, making it a valuable resource for new research. Notably, 16% of DWARF stars in this sector remain unpublished, while GIANT star researchers may prefer Sectors 10 and 11, where 5% of GIANTS are unpublished.
 
 For pulsation studies, DWARF stars cluster around ~0.05-day periods, while GIANTS peak at ~1.00 days. A-type DWARFs consistently exhibit ~0.03-day periods, whereas GIANTS show broader period distributions. M-type GIANTS are of particular interest due to their anomalous lack of short-period pulsations.
-
+<br/><br/>
 
 
 ## Insights Deep-Dive
@@ -212,6 +216,7 @@ For pulsation studies, DWARF stars cluster around ~0.05-day periods, while GIANT
 In order to make best use of team resources, we want to direct attention to those sectors of the sky which have the highest percentages of unpublished stars. Once this has been determined, researchers will be recommended to said sectors to conduct period spacing searches on known variable stars(?). However, ideal sectors may vary depeding on one's research objectives. For example: where should one look if they are hoping to publish on stars within a specific year of TESS observations? What sector should one examine if they are focused on publishing on pulsating GIANT stars? Pulsating DWARF stars? The dynamic filtering functionality implemented into the below dashboards allow team members to answer these questions.
 <br/><br/>
 
+##
 **1a. Slicing by Year: _Year 1_**
 
 Year 1 observations comprise sector IDs 1 - 13. These sectors encompass the southern hemisphere of TESS' field of view:
@@ -288,6 +293,7 @@ This visualization indicates a bi-modal distribution; there are two periods that
 ![all_dwarf_new](https://github.com/user-attachments/assets/481bae3a-d8f2-4d4d-ba18-d2cca0e0068c)
 <br/><br/>
 
+##
 **2a. Filtering by Spectral Type: _A-Type DWARF_**
 
   A-type dwarf stars have temperatures ranging from 7,300K - 10,000K. They are typically slightly more massive and have slightly larger radii than our sun, but are 5 to 25 times brighter. 
