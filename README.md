@@ -11,6 +11,10 @@
 - [Insights Deep-Dive](#insights-deep-dive)
   - [Published/Unpublished Stars](#where-should-researchers-look-for-candidate-stars-for-academic-papers)
   - [Pulsations](#pulsation-period-distribution-and-filtering-where-should-we-look-for-pulsations)
+- [Recommendations](#recommendations)
+- [Clarifying Questions, Assumptions, and Caveats](#clarifying-questions-assumptions-and-caveats)
+  - [Questions for Stakeholders Prior to Project Advancement](#questions-for-stakeholders-prior-to-project-advancement)
+  - [Assumptions and Caveats](#assumptions-and-caveats)
 
     
 
