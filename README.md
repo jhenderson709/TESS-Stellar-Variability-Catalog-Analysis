@@ -62,7 +62,9 @@ Though beyond the scope of this project, the ultimate function of pulsations sho
 ##
 ### Project Goals
   1. _Object profiling:_ To partition stars and their observational data into meaningful groups based on location, physical parameters, and pulsation characteristics. The goal is to streamline the identification of promising candidate stars for further study. This involves determining which regions of the sky contain the largest concentrations of stars that have yet to be published in scientific literature, thus enabling a more focused and efficient search for variable stars for further study.
+     
   2. _Pulsation Cohorts and Emergent Patterns:_ To uncover correlations between a star’s physical parameters (such as mass, temperature, radius) and its pulsation characteristics (such as pulsation period, amplitude, and power). By analyzing these relationships, the project aims to provide research teams with data-driven heuristics that can significantly expedite the process of identifying variable stars, or pulsations within knows variable stars, within large datasets. This would reduce the time and effort required for variable star searches and period spacing searches, particularly in massive datasets like those from TESS.
+     
   3. _Enhancing Understanding of TESS Observations:_ To equip users with a deeper intuition and understanding of how the TESS mission operates, including its observational strategies, limitations, and the types of data it provides. This will help researchers interpret TESS data more effectively and develop strategies for future observational campaigns.
 <br/><br/>
 
@@ -200,9 +202,12 @@ MENTIONED IN PAPER PYTHON SCRIPT?
 ##
 ### Data Structure Overview
 The data is comprised of several key aspects of interest to our researchers:
-  1. _Pulsation data:_ TESS VSC details whether a star has been attributed an identified pulsation, the period of the pulsation, and other characteristics associated with the strength, cause, and confidence level of the pulsation. Exploratory analysis of this data can reveal trends and patterns among similiar stars, and asteroseismic mode analysis of this data can help to constrain stellar models. 
+  1. _Pulsation data:_ TESS VSC details whether a star has been attributed an identified pulsation, the period of the pulsation, and other characteristics associated with the strength, cause, and confidence level of the pulsation. Exploratory analysis of this data can reveal trends and patterns among similiar stars, and asteroseismic mode analysis of this data can help to constrain stellar models.
+   
   2. _Physical Parameters:_ This dataset includes key properties that describe the stellar structure, such as surface temperature (Teff), mass, radius, and luminosity, among others. These parameters are fundamental in understanding stellar evolution, classification, and behavior. The data's relevance lies in its ability to establish correlations between a star's physical properties and its pulsation characteristics.
+     
   3. _Location Data:_ The location data provides essential information such as celestial coordinates (Right Ascension, Declination), the distance from Earth, and proper motion (pmRA, pmDE), which describe how stars are moving across the sky. This data is crucial for mapping the distribution of stars in TESS' field of view and understanding the dynamics of star populations. In this case, location data enables the identification of pulsating stars, and whether they have been published in academic papers, in specific regions of the sky, allowing for a more targeted study of variability and pulsation that could result in a new academic publication.
+     
   4. _Stellar Classifications:_ This dataset includes descriptors that classify stars based on their observed characteristics, such as spectral type, luminosity class, and other classification schemes. The classifications help group stars with similar properties, enabling researchers to focus on specific subsets of the data that share common characteristics. For example, by analyzing pulsation behavior within specific stellar classes (e.g., white dwarfs or red giants), researchers can gain deeper insights into the mechanisms behind their variability. These classifications also provide information on the instrument used to obtain the data, which is important for understanding the potential limitations or biases introduced during observation.
      
 ![semantic_model_rework](https://github.com/user-attachments/assets/0dc5074b-09ae-416a-9af1-f286b095c9f6)
