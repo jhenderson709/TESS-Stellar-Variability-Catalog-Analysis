@@ -57,9 +57,9 @@ Though beyond the scope of this project, the ultimate function of pulsations sho
 
 ##
 ### Project Goals
-  1. Object profiling: To partition stars, and their observational data, into groups to based on location data, physical parameters, and pulsation data to expidite the search for candidate stars for further study. Determine which locations contain the most stars that have not been published in scientific literature?
-  2. Pulsation Cohorts and Emergent Patterns: To detmermine correlations between the physical parameters of a star and its pulsation data. Variable star searches within large volumes of data is very time consuming. We aim to equip research teams with heuristics derived from analysis that will inform and expedite their variable star searches.
-  3. Help users develop an intuition about how TESS operates
+  1. Object profiling: To partition stars and their observational data into meaningful groups based on location, physical parameters, and pulsation characteristics. The goal is to streamline the identification of promising candidate stars for further study. This involves determining which regions of the sky contain the largest concentrations of stars that have yet to be explored or published in scientific literature, thus enabling a more focused and efficient search for novel variable stars.
+  2. Pulsation Cohorts and Emergent Patterns: To uncover correlations between a star’s physical parameters (such as mass, temperature, radius) and its pulsation characteristics (such as pulsation period, amplitude, and power). By analyzing these relationships, the project aims to provide research teams with data-driven heuristics that can significantly expedite the process of identifying variable stars within large datasets. This would reduce the time and effort required for variable star searches, particularly in massive datasets like those from TESS.
+  3. Enhancing Understanding of TESS Observations: To equip users with a deeper intuition and understanding of how the TESS mission operates, including its observational strategies, limitations, and the types of data it provides. This will help researchers interpret TESS data more effectively and develop strategies for future observational campaigns.
 <br/><br/>
 
 
