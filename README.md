@@ -360,11 +360,24 @@ Moderate confidence data for these stars tell a different story:
 <br/><br/>
 
 ## Recommendations
-
+Guiding Question: "Given what we’ve learned, what should be done next?" 
+What to include:
+Suggested research directions (e.g., "Investigate whether the low publication rate of dwarf stars is due to selection bias.")
+Process improvements (e.g., "Cross-check unpublished variables with additional catalogs to verify completeness.")
+Future analyses that should be conducted (e.g., "Analyze Sector 19’s observational conditions to determine if variability detection rates are affected.")
 ## Clarifying Questions, Assumptions, and Caveats
-Why are there more stars in year 1 than year 2?
+"Investigate whether selection bias is influencing the publication rate of dwarfs vs. giants, or if inherent astrophysical factors make giants more viable for study."
 ### Questions for Stakeholders Prior to Project Advancement
+Purpose: These are questions you, as the data analyst, need answered from stakeholders before moving forward with the project (or before they act on your findings).
+Guiding Question: "What do I need from the stakeholders before the project can move forward?"
+"Sector 19 has the highest percentage of unpublished variable stars (11.11%). Are there observational constraints in this sector, or could this be a statistical anomaly?"
+
 ### Assumptions and Caveats
+Purpose: This section proactively addresses limitations in the analysis, so that findings aren’t misinterpreted or overstated.
+Guiding Question: "What are the known limitations and assumptions that might affect the validity of these results?"
+"Observational biases may impact the completeness of TESS VSC, particularly in under-observed regions or for certain stellar classes. The data may also reflect researcher preference rather than true astrophysical prevalence."
+
+
 
 Contents:
 TESS Variable Catalog Analysis
