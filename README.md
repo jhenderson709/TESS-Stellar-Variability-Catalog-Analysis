@@ -211,7 +211,7 @@ The data is comprised of several key aspects of interest to our researchers:
   4. _Stellar Classifications:_ This dataset includes descriptors that classify stars based on their observed characteristics, such as spectral type, luminosity class, and other classification schemes. The classifications help group stars with similar properties, enabling researchers to focus on specific subsets of the data that share common characteristics. For example, by analyzing pulsation behavior within specific stellar classes (e.g., white dwarfs or red giants), researchers can gain deeper insights into the mechanisms behind their variability. These classifications also provide information on the instrument used to obtain the data, which is important for understanding the potential limitations or biases introduced during observation.
      
 ![semantic_model_rework](https://github.com/user-attachments/assets/0dc5074b-09ae-416a-9af1-f286b095c9f6)
-> A screenshot of the semantic model as it exists within Power BI.
+> A screenshot of the semantic model as it exists within Power BI. The "Measure Table" contains measures that were created within Power BI to aid in the construction of various visuals in the report.
 <br/><br/>
 
 ##
@@ -374,30 +374,27 @@ What to include:
 Suggested research directions (e.g., "Investigate whether the low publication rate of dwarf stars is due to selection bias.")
 Process improvements (e.g., "Cross-check unpublished variables with additional catalogs to verify completeness.")
 Future analyses that should be conducted (e.g., "Analyze Sector 19’s observational conditions to determine if variability detection rates are affected.")
+Investigate the 1.00 days period peak. Its precision to the length of an Earth day makes me wonder whether there is some kind of resultant artifact in the data. I would imagine, if this were the case, though, that this artifact would be present in all of the histograms across the board. This is not the case, however. As previously discussed, the A-type DWARF histogram shows no indication of an emergent peak at 1.00 days.
+Investigate 
 ## Clarifying Questions, Assumptions, and Caveats
 "Investigate whether selection bias is influencing the publication rate of dwarfs vs. giants, or if inherent astrophysical factors make giants more viable for study."
 ### Questions for Stakeholders Prior to Project Advancement
 Purpose: These are questions you, as the data analyst, need answered from stakeholders before moving forward with the project (or before they act on your findings).
 Guiding Question: "What do I need from the stakeholders before the project can move forward?"
 "Sector 19 has the highest percentage of unpublished variable stars (11.11%). Are there observational constraints in this sector, or could this be a statistical anomaly?"
+Why are there fewer stars in year 2 of observations as compared to year 1? TESS VSC requires variable stars to be identified and confirmed in order to include them in the dataset. Is this simply a result of access to data i.e. researchers could get their hands on year 1 data first?
+Why does TESS VSC have so few data points beyond ~12,000K. We essentially miss out on any aggregate data pertaining to O-type stars.
+Why are there seemingly no white dwarfs on the HR diagram? Is it because they are not luminous enough to be detected in such a short viewing period?
+Why are GIANT stars studied disproportionately more than DWARF stars?
 
 ### Assumptions and Caveats
 Purpose: This section proactively addresses limitations in the analysis, so that findings aren’t misinterpreted or overstated.
 Guiding Question: "What are the known limitations and assumptions that might affect the validity of these results?"
 "Observational biases may impact the completeness of TESS VSC, particularly in under-observed regions or for certain stellar classes. The data may also reflect researcher preference rather than true astrophysical prevalence."
 
+Spectral classifications provided by TESS VSC are useful, but not perfect (there are some outliers in the HR diagram–some giant stars labele as GIANTS that seem to belong to the main sequence). Importantly, they are not granular enough. The spectral type calculated column aims to minimze the consequences of said granularity, but analysis is limited nonetheless. 
 
-
-Contents:
-TESS Variable Catalog Analysis
-  Project Background (ARDASTELLA intro, and what im doing – insights to expidite variable star study)
-  Executive Summary (Detail data set, show data model, and ARDASTELLA dataset contributions. Seeking hueristics that govern variable star searches, saving resources i.e. money, telescope observation time, etc.)
-  Insights Deep-Dive (no text here – straigh to the insights. Focus on metrics and tie things together.)
-    insight 1. What stars are most likely to be variable?
-    insight 2  What Periods should we expect when looking at stars? For different classes?
-    insight 3  Confidence levels reveal trends in pulsation data?
-  Recommendations (Guide the research team based on the insights above)
-  Clarifying Questions, Assumptions, and Caveats
-    Questions for Stakeholders Prior to Project Advancement
-    Assumptions and Caveats
+Data not included for O-type stars (there are less than 100 in the dataset).
+Data not included for White Dwarf stars, a commonly studied astrophysical object.
+Pulsation data only lists one period. In reality, many pulsating stars exhibit several pulsations. The most variable can exhibit dozens, if not hundreds that we can observe.
 
