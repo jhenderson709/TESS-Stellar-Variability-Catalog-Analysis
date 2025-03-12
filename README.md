@@ -374,14 +374,14 @@ Moderate confidence data for these stars tell a different story:
 
 ## Recommendations
 
-<ins>Optimizing Searches for Candidate Stars for Further Study</ins>
+<ins>Improving Star Candidate Selection with Data-Driven Insights</ins>
 * **Prioritize Less Published Sectors:** direct candidate star searches to those sectors with the highest percentage of unpublished stars for the star type of interest to the research team–sector 19 for DWARF stars, and sector 10 for GIANT stars.
   
 * **Conduct Variable Star Searches in High-Impact Regions:** when seeking additional variable stars from those included in the TESS VSC, conduct searches in regions of TESS data with fewer confirmed variable stars–the northern hemisphere of TESS' field of view.
 
 
-<ins>Utilizing Data-Driven Pulsation Hueristics</ins>
-* **Use Pulsation Trends to Narrow Period Spacing Searches:** aggregate pulsation data, histogram visuals, and scientific literature show that certain star types consistently exhibit pulsations in specific regions of the period spectrum. Integrate rules of thumb into methodology to guide researchers to regions of a periodogram where a period spacing mode/sequence is more likely to be discovered.
+<ins>Pattern Recognition in Stellar Pulsation Data</ins>
+* **Use Pulsation Trends to Narrow Period Spacing Searches:** By visualizing pulsation distributions using histograms, specific period ranges where modes are most likely to appear were identified. This insight allows us to optimize period spacing searches by focusing on high-frequency regions, reducing unnecessary data processing.
   
 * **Examine Amplitude-Frequency Spectra Based on Pulsation Trends:** silimarly to the above, presence of amplitude peaks in amplitude-frequency spectra can be anticipated to expidite future variable star searches. 
   
@@ -390,7 +390,7 @@ Moderate confidence data for these stars tell a different story:
 
 * **Consider G-Type DWARF, K-Type DWARF, K-Type GIANT, or M-Type GIANT Case Study:** Given the diverse/spread period histograms of these stars, period spacing searches within their periodograms are more more likely to reveal mutiple pulsation modes or sequences.
   
-<ins>Cross-Checking Results with Literature</ins>
+<ins>Validating Insights with External Datasets</ins>
 * **Corroborate Pulsation Hueristics:** Compare pulsation trends with existing data in asteroseismology literature to validate findings or discover uniqueness. 
   
 * **Examine Contributions from More Granular Star Types:** More granular spectral designations are likely to exist under the umbrella of those provided by the TESS VSC data. Dilenations could be used to separate features seen in the relevant histograms, allowing stellar models and parameters to be further constrained.
@@ -404,31 +404,31 @@ Moderate confidence data for these stars tell a different story:
 "Sector 19 has the highest percentage of unpublished variable stars (11.11%). Are there observational constraints in this sector, or could this be a statistical anomaly?"
 
 * **Data Volume Discrepancy Between Year 1 and Year 2 TESS Observations**
-Why are there fewer stars in year 2 of observations as compared to year 1?
-What are the contributing factors? TESS VSC requires variable stars to be identified and confirmed in order to include them in the dataset. Is this simply a result of access to data i.e. researchers could get their hands on year 1 data first?
+Why are there fewer stars in year 2 of observations as compared to year 1? Is this simply a result of access to data i.e. researchers could get their hands on year 1 data first? TESS VSC requires variable stars to be identified and confirmed in order to include them in the dataset, after all.
 
 * **Lack of High Temperature Stars in TESS VSC Data**
-Why does TESS VSC have so few data points beyond ~12,000K. We essentially miss out on any aggregate data pertaining to O-type stars.
+Why does TESS VSC have so few data points beyond ~12,000K. We essentially miss out on any aggregate data pertaining to O-type and B-type stars.
 
 * **Lack of White Dwarfs in TESS VSC Data**
+Why are white dwarfs absent from the TESS VSC Data? Is it because they are not luminous enough to be detected in such a short viewing period?
   
 * **Small Quantity of Extreme Horizontal Branch Stars**
-Why are there seemingly no white dwarfs on the HR diagram? Is it because they are not luminous enough to be detected in such a short viewing period?
+There are very few stars on the extreme horizontal branch of the HR diagram in the pulsation dashboard. Why would these stars not be included in the TESS VSC if these stars, like subdwarf B stars, are popular subjects of stellar pulsation studies?
 
 * **Discrepancy Between GIANT and DWARF Publishing Rates**
 Why are GIANT stars studied disproportionately more than DWARF stars?
 
 ### Assumptions and Caveats
 
-* "Observational biases may impact the completeness of TESS VSC, particularly in under-observed regions or for certain stellar classes. The data may also reflect researcher preference rather than true astrophysical prevalence."
+* Observational biases may impact the completeness of TESS VSC, particularly in under-observed regions or for certain stellar classes. The data may also reflect researcher preference rather than true astrophysical prevalence.
 
-* Spectral classifications provided by TESS VSC are useful, but not perfect (there are some outliers in the HR diagram–some giant stars labele as GIANTS that seem to belong to the main sequence). Importantly, they are not granular enough. The spectral type calculated column aims to minimze the consequences of said granularity, but analysis is limited nonetheless. 
+* Spectral classifications provided by TESS VSC are useful, but not perfect (there are some outliers in the HR diagram–some giant stars labeled as GIANTS that seem to belong to the main sequence). Importantly, they are not granular enough. The spectral type calculated column aims to minimze the consequences of said granularity, but analysis is limited nonetheless. 
 
 * Data not included for O-type stars (there are less than 100 in the dataset).
 
 * Data not included for White Dwarf stars, a commonly studied astrophysical object.
 
-* Pulsation data only lists one period. In reality, many pulsating stars exhibit several pulsations. The most variable can exhibit dozens, if not hundreds that we can observe.
-
-* Mentioned_in_paper_simbad assumes that a star has not been published if that star is not attributed any references within Simbad portal. It is possible that a paper exists for a star, but it was not attributed. Unlikely, though, given the popularity of Simbad?
+ *Our analysis only considers the strongest pulsation mode per star, while many stars exhibit multiple simultaneous pulsations.
+ 
+* Mentioned_in_paper_simbad assumes that a star has not been published if that star is not attributed any references within the Simbad portal. It is possible that a paper exists for a star, but it was not attributed. Unlikely, though, given the popularity of Simbad?
 
