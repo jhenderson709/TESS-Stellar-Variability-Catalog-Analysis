@@ -56,7 +56,7 @@ The gray dots in the Mollweide plot are stars in the data set that have been men
 
 Deriving stellar pulsations is made possible by identifying and analyzing variable light signatures in the time-series light data (light curves) of stars observed by high-end telescopes like TESS. If periodicity is present in a star's light curve, Fourier analysis (a mathematical transformation of time-series data) will reveal a corresponding amplitude peak–a pulsation candidate–in the amplitude-frequency domain; an amplitude peak represents a frequency at which the star's pulsations are most prominent. If a given peak is vetted for noise and contamination considerations and is determined to be of sufficient amplitude, the amplitude peak can be called a pulsation and the star to which it belongs can be distinguished as a variable star.
 
-Though beyond the scope of this project, the ultimate function of pulsations should be mentioned: Physical parameters of a star, such as surface temperature, gravity, mass, and luminosity, experience some degree of instability. In the case of variable stars, this instability is related to pulsation period. Each pulsation period corresponds to a specific n, l, m geometry (spherical harmonics), allowing us to use these geometries to constrain free parameters—physical properties of the star that cannot be directly observed but can be inferred. These modes or patterns of oscillation are key to understanding the star’s internal structure. As we analyze the pulsation geometry for each mode detected, we narrow down the range of possible solutions for the star’s structure. Crucially, there is only one true stellar structure for a given object, and this work aims to bring us closer to identifying that structure for the stars discussed.
+Though beyond the scope of this project, the ultimate function of pulsations should be mentioned: Physical parameters of a star, such as surface temperature, gravity, mass, and luminosity, experience some degree of instability. In the case of variable stars, this instability is related to pulsation period. Each pulsation period corresponds to a specific n, l, m geometry (spherical harmonics), allowing us to use these geometries to constrain free parameters—physical properties of the star that cannot be directly observed but can be inferred. These modes or patterns of oscillation are key to understanding the star’s internal structure. As we analyze the pulsation geometry for each mode detected (detection methods include [asymptotic period spacing](https://www.aanda.org/articles/aa/full_html/2016/04/aa27055-15/aa27055-15.html?utm_source=chatgpt.com) and [rotaional multiplets](https://www.aanda.org/articles/aa/full_html/2014/09/aa23611-14/aa23611-14.html)), we narrow down the range of possible solutions for the star’s structure. Crucially, there is only one true stellar structure for a given object, and this work aims to bring us closer to identifying that structure for the stars discussed.
 <br/><br/>
 
 ##
@@ -219,6 +219,8 @@ The data is comprised of several key aspects of interest to our researchers:
 Sector 19 from Year 2 of TESS VSC data has an 11.11% unpublished star population, making it a valuable resource for new research. Notably, 16% of DWARF stars in this sector remain unpublished, while GIANT star researchers may prefer Sectors 10 and 11, where 5% of GIANTS are unpublished.
 
 For pulsation studies, DWARF stars cluster around ~0.05-day periods, while GIANTS peak at ~1.00 days. A-type DWARFs consistently exhibit ~0.03-day periods, whereas GIANTS show broader period distributions. M-type GIANTS are of particular interest due to their anomalous lack of short-period pulsations.
+
+RELATE THIS TO MODAL ANALYSIS. MORE NARROW HISTOGRAMS SUGGEST FEWER PULSATION MODES, BUT COULD HELP FOCUS ON A SPECIFIC MODE FAMILY> DIVERSE PERIOD SPECTRA SUGGEST PRESENCE OF MULTIPLE MODES, WHICH MAKES MODE CLASSIFICATION EASIER. Different modes probe different depths within the star, so a wider range of pulsation periods provides more detailed constraints on stellar interiors.
 <br/><br/>
 
 
@@ -379,16 +381,21 @@ Moderate confidence data for these stars tell a different story:
 
 
 <ins>Utilizing Data-Driven Pulsation Hueristics</ins>
-*
-*
-*
+* **Use Pulsation Trends to Narrow Period Spacing Searches:** aggregate pulsation data, histogram visuals, and scientific literature show that certain star types consistently exhibit pulsations in specific regions of the period spectrum. Integrate rules of thumb into methodology to guide researchers to regions of a periodogram where a period spacing mode/sequence is more likely to be discovered.
+  
+* **Examine Amplitude-Frequency Spectra Based on Pulsation Trends:** silimarly to the above, presence of amplitude peaks in amplitude-frequency spectra can be anticipated to expidite future variable star searches. 
+  
+<ins>Investigating  Promising Pulsation Profiles</ins>
+* **Consider A-Type DWARF Case Study:** A-Type DWARF pulsations are remarkably consistent, and as such, make a compelling case for targeted study of spefic pulsation mode families, such as fundamental or first overtone modes.
 
+* **Consider G-Type DWARF, K-Type DWARF, K-Type GIANT, or M-Type GIANT Case Study:** Given the diverse/spread period histograms of these stars, period spacing searches within their periodograms are more more likely to reveal mutiple pulsation modes or sequences.
+  
+<ins>Cross-Checking Results with Literature</ins>
+* **Corroborate Pulsation Hueristics:** Compare pulsation trends with existing data in asteroseismology literature to validate findings or discover uniqueness. 
+  
+* **Examine Contributions from More Granular Star Types:** More granular spectral designations are likely to exist under the umbrella of those provided by the TESS VSC data. Dilenations could be used to separate features seen in the relevant histograms, allowing stellar models and parameters to be further constrained.
 
-<ins>Investigating Distinctive Pulsation Profiles</ins>
-*
-*
-*
-
+* **Investigate Observational Biases:** The 1.00 days frequency peak observed in many period histograms may be an artifact resulting from instrumentation. Check publications on TESS data to determine if this feature has been noted before and whether it is real signal or not.
 
 
 Research teams are advised to examine known unpublished variable stars in 
@@ -418,4 +425,6 @@ Spectral classifications provided by TESS VSC are useful, but not perfect (there
 Data not included for O-type stars (there are less than 100 in the dataset).
 Data not included for White Dwarf stars, a commonly studied astrophysical object.
 Pulsation data only lists one period. In reality, many pulsating stars exhibit several pulsations. The most variable can exhibit dozens, if not hundreds that we can observe.
+
+Mentioned_in_paper_simbad assumes that a star has not been published if that star is not attributed any references within Simbad portal. It is possible that a paper exists for a star, but it was not attributed. Unlikely, though, given the popularity of Simbad?
 
