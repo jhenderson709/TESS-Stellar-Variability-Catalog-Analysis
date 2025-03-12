@@ -398,14 +398,7 @@ Moderate confidence data for these stars tell a different story:
 * **Investigate Observational Biases:** The 1.00 days frequency peak observed in many period histograms may be an artifact resulting from instrumentation. Check publications on TESS data to determine if this feature has been noted before and whether it is real signal or not.
 
 
-Research teams are advised to examine known unpublished variable stars in 
-Suggested research directions (e.g., "Investigate whether the low publication rate of dwarf stars is due to selection bias.")
-Process improvements (e.g., "Cross-check unpublished variables with additional catalogs to verify completeness.")
-Future analyses that should be conducted (e.g., "Analyze Sector 19’s observational conditions to determine if variability detection rates are affected.")
-Investigate the 1.00 days period peak. Its precision to the length of an Earth day makes me wonder whether there is some kind of resultant artifact in the data. I would imagine, if this were the case, though, that this artifact would be present in all of the histograms across the board. This is not the case, however. As previously discussed, the A-type DWARF histogram shows no indication of an emergent peak at 1.00 days.
-Investigate 
 ## Clarifying Questions, Assumptions, and Caveats
-"Investigate whether selection bias is influencing the publication rate of dwarfs vs. giants, or if inherent astrophysical factors make giants more viable for study."
 ### Questions for Stakeholders Prior to Project Advancement
 Purpose: These are questions you, as the data analyst, need answered from stakeholders before moving forward with the project (or before they act on your findings).
 Guiding Question: "What do I need from the stakeholders before the project can move forward?"
