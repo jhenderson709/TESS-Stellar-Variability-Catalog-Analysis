@@ -237,6 +237,7 @@ Year 1 observations comprise sector IDs 1 - 13. These sectors occupy the souther
 * Year 1 observations contain the 3 most published sectors in the dataset; only 2% of sector 1 stars are unpublished verified variable stars, while sectors 13 and 4 have 4% and 5% respectively.
 * While there are more unpublished stars within this data, their are fewer unpublished stars when compared to year 2 proportionally.
 * A significant percentage of stars within Year 1 observations–almost 10%–were not attributed a useful spectral designation.
+* Year 1 observations, the southern hemisphere of TESS' field of view, has more confirmed variable stars than year 2: 48K.
 <br/><br/>
 
 **1b. Slicing by Year: _Year 2_**
@@ -247,6 +248,7 @@ Year 2 observations comprise sector IDs 14 - 26. These sectors occupy the northe
 * The top 5 sectors IDs in year 2 with the largest percentages of unpublished variable stars are as follows: 19 (11%), 24 (10%), 18 (8%), 17 (7%), 16 (7%).
 * Sector 19 has the highest percentage of unpublished variable stars across the whole data set: 11.11%
 * Year 2 observations have a greater porportion of DWARF stars across all of its sectors when compared to Year 1.
+* Year 2 observations, the northern hemisphere of TESS' field of view, has fewer confirmed variable stars than year 1: 36K.
 <br/><br/>
 
 ##
@@ -369,8 +371,27 @@ Moderate confidence data for these stars tell a different story:
 <br/><br/>
 
 ## Recommendations
-Guiding Question: "Given what we’ve learned, what should be done next?" 
-What to include:
+
+<ins>Optimizing Searches for Candidate Stars for Further Study</ins>
+* **Prioritize Less Published Sectors:** direct candidate star searches to those sectors with the highest percentage of unpublished stars for the star type of interest to the research team–sector 19 for DWARF stars, and sector 10 for GIANT stars.
+  
+* **Conduct Variable Star Searches in High-Impact Regions:** when seeking additional variable stars from those included in the TESS VSC, conduct searches in regions of TESS data with fewer confirmed variable stars–the northern hemisphere of TESS' field of view.
+
+
+<ins>Utilizing Data-Driven Pulsation Hueristics</ins>
+*
+*
+*
+
+
+<ins>Investigating Distinctive Pulsation Profiles</ins>
+*
+*
+*
+
+
+
+Research teams are advised to examine known unpublished variable stars in 
 Suggested research directions (e.g., "Investigate whether the low publication rate of dwarf stars is due to selection bias.")
 Process improvements (e.g., "Cross-check unpublished variables with additional catalogs to verify completeness.")
 Future analyses that should be conducted (e.g., "Analyze Sector 19’s observational conditions to determine if variability detection rates are affected.")
