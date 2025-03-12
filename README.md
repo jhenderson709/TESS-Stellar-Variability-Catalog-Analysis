@@ -400,24 +400,35 @@ Moderate confidence data for these stars tell a different story:
 
 ## Clarifying Questions, Assumptions, and Caveats
 ### Questions for Stakeholders Prior to Project Advancement
-Purpose: These are questions you, as the data analyst, need answered from stakeholders before moving forward with the project (or before they act on your findings).
-Guiding Question: "What do I need from the stakeholders before the project can move forward?"
+
 "Sector 19 has the highest percentage of unpublished variable stars (11.11%). Are there observational constraints in this sector, or could this be a statistical anomaly?"
-Why are there fewer stars in year 2 of observations as compared to year 1? TESS VSC requires variable stars to be identified and confirmed in order to include them in the dataset. Is this simply a result of access to data i.e. researchers could get their hands on year 1 data first?
+
+* **Data Volume Discrepancy Between Year 1 and Year 2 TESS Observations**
+Why are there fewer stars in year 2 of observations as compared to year 1?
+What are the contributing factors? TESS VSC requires variable stars to be identified and confirmed in order to include them in the dataset. Is this simply a result of access to data i.e. researchers could get their hands on year 1 data first?
+
+* **Lack of High Temperature Stars in TESS VSC Data**
 Why does TESS VSC have so few data points beyond ~12,000K. We essentially miss out on any aggregate data pertaining to O-type stars.
+
+* **Lack of White Dwarfs in TESS VSC Data**
+  
+* **Small Quantity of Extreme Horizontal Branch Stars**
 Why are there seemingly no white dwarfs on the HR diagram? Is it because they are not luminous enough to be detected in such a short viewing period?
+
+* **Discrepancy Between GIANT and DWARF Publishing Rates**
 Why are GIANT stars studied disproportionately more than DWARF stars?
 
 ### Assumptions and Caveats
-Purpose: This section proactively addresses limitations in the analysis, so that findings aren’t misinterpreted or overstated.
-Guiding Question: "What are the known limitations and assumptions that might affect the validity of these results?"
-"Observational biases may impact the completeness of TESS VSC, particularly in under-observed regions or for certain stellar classes. The data may also reflect researcher preference rather than true astrophysical prevalence."
 
-Spectral classifications provided by TESS VSC are useful, but not perfect (there are some outliers in the HR diagram–some giant stars labele as GIANTS that seem to belong to the main sequence). Importantly, they are not granular enough. The spectral type calculated column aims to minimze the consequences of said granularity, but analysis is limited nonetheless. 
+* "Observational biases may impact the completeness of TESS VSC, particularly in under-observed regions or for certain stellar classes. The data may also reflect researcher preference rather than true astrophysical prevalence."
 
-Data not included for O-type stars (there are less than 100 in the dataset).
-Data not included for White Dwarf stars, a commonly studied astrophysical object.
-Pulsation data only lists one period. In reality, many pulsating stars exhibit several pulsations. The most variable can exhibit dozens, if not hundreds that we can observe.
+* Spectral classifications provided by TESS VSC are useful, but not perfect (there are some outliers in the HR diagram–some giant stars labele as GIANTS that seem to belong to the main sequence). Importantly, they are not granular enough. The spectral type calculated column aims to minimze the consequences of said granularity, but analysis is limited nonetheless. 
 
-Mentioned_in_paper_simbad assumes that a star has not been published if that star is not attributed any references within Simbad portal. It is possible that a paper exists for a star, but it was not attributed. Unlikely, though, given the popularity of Simbad?
+* Data not included for O-type stars (there are less than 100 in the dataset).
+
+* Data not included for White Dwarf stars, a commonly studied astrophysical object.
+
+* Pulsation data only lists one period. In reality, many pulsating stars exhibit several pulsations. The most variable can exhibit dozens, if not hundreds that we can observe.
+
+* Mentioned_in_paper_simbad assumes that a star has not been published if that star is not attributed any references within Simbad portal. It is possible that a paper exists for a star, but it was not attributed. Unlikely, though, given the popularity of Simbad?
 
