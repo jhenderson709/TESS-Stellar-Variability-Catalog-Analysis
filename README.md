@@ -35,7 +35,7 @@ The Transiting Exoplanet Survey Satellite (TESS) is a space telescope in Earth's
 > A demonstration of how TESS samples the night sky using data from the the TESS Variable Star Catalog. Each frame represents one sector of data from TESS' point of view. Note how the sectors flip from one hemisphere to the other – this change represents a new year of observations.
 
 
-The TESS Variable Star Catalog worked to identify as many variable stars as possible within the first two years of TESS observations. Because TESS takes two years to complete its 'all-sky' survey cycle, we have access to most all known variable stars observed by TESS in our data set. The visualization below is configured to show all TESS VSC data for the first two years of the mission concurrently:
+The TESS Stellar Variability Catalog (TESS SVC), which was [published by the American Astronomical Society in 2023](https://iopscience.iop.org/article/10.3847/1538-4365/acdee5), worked to identify as many variable stars as possible within the first two years of TESS observations. Because TESS takes two years to complete its 'all-sky' survey cycle, we have access to most all known variable stars observed by TESS in our data set. The visualization below is configured to show all TESS SVC data for the first two years of the mission concurrently:
 <p align="center">
   <img src="https://github.com/user-attachments/assets/1dbb5a90-880f-471f-bc18-d7ba3c580af6">
 </p>
@@ -72,7 +72,7 @@ Though beyond the scope of this project, the ultimate function of pulsations sho
 ## Data Overview
 ### Data Pipeline/ETL Process
 
-  Nearly all of the data was sourced from a single location: within the Mikulski Archive for Space Telescopes (MAST) website, a popular resource for astronomy-astrophysics, a bulk .csv download is provided for the TESS Variable Star Catalog (TESS VSC), which was [published by the American Astronomical Society in 2023](https://iopscience.iop.org/article/10.3847/1538-4365/acdee5).
+  Nearly all of the data was sourced from a single location: within the Mikulski Archive for Space Telescopes (MAST) website, a popular resource for astronomy-astrophysics, a bulk .csv download is provided for the [TESS SVC](https://iopscience.iop.org/article/10.3847/1538-4365/acdee5).
 
 ![TESS_SVC_csv](https://github.com/user-attachments/assets/d16d9cea-c39d-4293-9c75-801b7da5950e)
 
@@ -81,7 +81,7 @@ This file contains ~85,000 rows with well over 100 columns. Most of the data are
 In order to start working with the data, the .csv was loaded into a personal dedicated MySQL database. First, a table configured for only the most relevant fields was required (some fields were renamed for personal preference/clarity):
 
 ```sql
-CREATE TABLE TESS_VSC_varchar_staging (
+CREATE TABLE TESS_SVC_varchar_staging (
     TIC VARCHAR(50),
     catalog_name VARCHAR(50),
     stellar_class VARCHAR(50),
@@ -114,8 +114,8 @@ Above is a raw staging table in which all data types are defined as VARCHAR. Giv
 With a staging table created, data from the aforementioned .csv could be loaded into the table in MySQL workbench:
 
 ```sql
-LOAD DATA LOCAL INFILE 'C:\\Program Files\\MySQL\\MySQL Server 9.1\\Uploads\\TESS_VSC.csv'
-INTO TABLE TESS_VSC_varchar_staging
+LOAD DATA LOCAL INFILE 'C:\\Program Files\\MySQL\\MySQL Server 9.1\\Uploads\\TESS_SVC.csv'
+INTO TABLE TESS_SVC_varchar_staging
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES
@@ -127,7 +127,7 @@ Now the data could be cleaned; using data manipulation language, nan values were
 A second staging table was then implemented in the pipeline to appropriately define data types and act as a fail-safe, preserving a finalized version of the cleaned data:
 
 ```sql
-CREATE TABLE TESS_VSC_datatype_staging AS
+CREATE TABLE TESS_SVC_datatype_staging AS
 SELECT 
     CAST(TIC AS UNSIGNED INT) AS TIC,
     catalog_name,
@@ -153,12 +153,12 @@ SELECT
     CAST(max_pulsation AS DECIMAL(10,2)) AS max_pulsation,
     CAST(amplitude_1 AS DECIMAL(10,2)) AS amplitude_1,
     CAST(power_1 AS DECIMAL(10,3)) AS power_1
-FROM TESS_VSC_varchar_staging;
+FROM TESS_SVC_varchar_staging;
 ```
 With the data cleaned and structured, a production table was created to ensure data integrity and provide a stable dataset for analysis in Power BI. Unlike the staging tables, which facilitate transformation and validation, the production table serves as the final authoritative source for visualization and reporting:
 
 ```sql
-CREATE TABLE TESS_VSC_production (
+CREATE TABLE TESS_SVC_production (
     TIC INT UNSIGNED,
     catalog_name VARCHAR(50),
     stellar_class VARCHAR(50),
@@ -190,8 +190,8 @@ CREATE TABLE TESS_VSC_production (
 Finally, an INSERT statement is used to load the clean data into our production table:
 
 ```sql
-INSERT INTO TESS_VSC_production
-SELECT * FROM TESS_VSC_datatype_staging
+INSERT INTO TESS_SVC_production
+SELECT * FROM TESS_SVC_datatype_staging
 ```
 
 The resultant flat file was loaded into Power BI using an ODBC connector where it was transformed into a star schema; In Power Query, reference tables were created from the source data and stripped down to fields pertaining to specific entities. To optimize performance, data redundancy was minimized by removing duplicate values, clustered indexes were created to improve query efficiency, and primary/foreign key relationships were established between tables to maintain referential integrity.
@@ -202,7 +202,7 @@ MENTIONED IN PAPER PYTHON SCRIPT?
 ##
 ### Data Structure Overview
 The data is comprised of several key aspects of interest to our researchers:
-  1. _Pulsation data:_ TESS VSC details whether a star has been attributed an identified pulsation, the period of the pulsation, and other characteristics associated with the strength, cause, and confidence level of the pulsation. Exploratory analysis of this data can reveal trends and patterns among similiar stars, and asteroseismic mode analysis of this data can help to constrain stellar models.
+  1. _Pulsation data:_ TESS SVC details whether a star has been attributed an identified pulsation, the period of the pulsation, and other characteristics associated with the strength, cause, and confidence level of the pulsation. Exploratory analysis of this data can reveal trends and patterns among similiar stars, and asteroseismic mode analysis of this data can help to constrain stellar models.
    
   2. _Physical Parameters:_ This data includes key properties that describe the stellar structure, such as surface temperature (Teff), mass, radius, and luminosity, among others. These parameters are fundamental in understanding stellar evolution, classification, and behavior. The data's relevance lies in its ability to establish correlations between a star's physical properties and its pulsation characteristics.
      
@@ -216,7 +216,7 @@ The data is comprised of several key aspects of interest to our researchers:
 
 ##
 ## Executive Summary
-Sector 19 from Year 2 of TESS VSC data has an 11.11% unpublished star population, making it a valuable resource for new research. Notably, 16% of DWARF stars in this sector remain unpublished, while GIANT star researchers may prefer Sectors 10 and 11, where 5% of GIANTS are unpublished.
+Sector 19 from Year 2 of TESS SVC data has an 11.11% unpublished star population, making it a valuable resource for new research. Notably, 16% of DWARF stars in this sector remain unpublished, while GIANT star researchers may prefer Sectors 10 and 11, where 5% of GIANTS are unpublished.
 
 For pulsation studies, DWARF stars cluster around ~0.05-day periods, while GIANTS peak at ~1.00 days. A-type DWARFs consistently exhibit ~0.03-day periods, whereas GIANTS show broader period distributions. M-type GIANTS are of particular interest due to their anomalous lack of short-period pulsations.
 
@@ -256,16 +256,16 @@ Year 2 observations comprise sector IDs 14 - 26. These sectors occupy the northe
 ##
 **2a. Slicing by Spectral Designation: _DWARF_**
 
-![TESS_DWARF_VSC](https://github.com/user-attachments/assets/ae246d66-49e0-4cdf-94f9-70862e5f2fdf)
-* DWARF stars are common in the dataset–they account for 64% of stars in the TESS VSC. 
+![TESS_DWARF_SVC](https://github.com/user-attachments/assets/ae246d66-49e0-4cdf-94f9-70862e5f2fdf)
+* DWARF stars are common in the dataset–they account for 64% of stars in the TESS SVC. 
 * DWARF stars are much less published than giants, with many sectors at or around 10% of their stars being unpublished.
 * Sector 19 DWARF stars are 16% unpublished, representing the highest percentage of unpublished stars of any subset of the data.
 <br/><br/>
 
 **2b. Slicing by Spectral Designation: _GIANT_**
 
-![TESS_GIANT_VSC](https://github.com/user-attachments/assets/c10545bd-1eb3-4cce-847d-fb486bdaebc7)
-* GIANT stars are less common in any stellar population, and that holds true in the TESS VSC. 29% of stars in the data set are GIANT stars.
+![TESS_GIANT_SVC](https://github.com/user-attachments/assets/c10545bd-1eb3-4cce-847d-fb486bdaebc7)
+* GIANT stars are less common in any stellar population, and that holds true in the TESS SVC. 29% of stars in the data set are GIANT stars.
 * GIANT stars within the data have been thouroughly examined. Many sectors have ~99% of their GIANT stars featured in a publication already.
 * Sector 10 has the highest percentage of unpublished GIANT stars: 5%
 
@@ -377,7 +377,7 @@ Moderate confidence data for these stars tell a different story:
 <ins>Improving Star Candidate Selection with Data-Driven Insights</ins>
 * **Prioritize Less Published Sectors:** direct candidate star searches to those sectors with the highest percentage of unpublished stars for the star type of interest to the research team–sector 19 for DWARF stars, and sector 10 for GIANT stars.
   
-* **Conduct Variable Star Searches in High-Impact Regions:** when seeking additional variable stars from those included in the TESS VSC, conduct searches in regions of TESS data with fewer confirmed variable stars–the northern hemisphere of TESS' field of view.
+* **Conduct Variable Star Searches in High-Impact Regions:** when seeking additional variable stars from those included in the TESS SVC, conduct searches in regions of TESS data with fewer confirmed variable stars–the northern hemisphere of TESS' field of view.
 
 
 <ins>Pattern Recognition in Stellar Pulsation Data</ins>
@@ -393,7 +393,7 @@ Moderate confidence data for these stars tell a different story:
 <ins>Validating Insights with External Datasets</ins>
 * **Corroborate Pulsation Hueristics:** Compare pulsation trends with existing data in asteroseismology literature to validate findings or discover uniqueness. 
   
-* **Examine Contributions from More Granular Star Types:** More granular spectral designations are likely to exist under the umbrella of those provided by the TESS VSC data. Dilenations could be used to separate features seen in the relevant histograms, allowing stellar models and parameters to be further constrained.
+* **Examine Contributions from More Granular Star Types:** More granular spectral designations are likely to exist under the umbrella of those provided by the TESS SVC data. Dilenations could be used to separate features seen in the relevant histograms, allowing stellar models and parameters to be further constrained.
 
 * **Investigate Observational Biases:** The 1.00 days frequency peak observed in many period histograms may be an artifact resulting from instrumentation. Check publications on TESS data to determine if this feature has been noted before and whether it is real signal.
 
@@ -402,28 +402,28 @@ Moderate confidence data for these stars tell a different story:
 ### Questions for Stakeholders Prior to Project Advancement
 
 * **Data Volume Discrepancy Between Year 1 and Year 2 TESS Observations**
-Why are there fewer stars in year 2 of observations as compared to year 1? Is this simply a result of access to data i.e. researchers could get their hands on year 1 data first? TESS VSC requires variable stars to be identified and confirmed in order to include them in the dataset, after all.
+Why are there fewer stars in year 2 of observations as compared to year 1? Is this simply a result of access to data i.e. researchers could get their hands on year 1 data first? TESS SVC requires variable stars to be identified and confirmed in order to include them in the dataset, after all.
 
 * **Standout Unpublished Sectors**
 Why do some sectors differ greatly in their percentages of unpublished variable stars. Are there observational contraints that contribute to these discrepancies?
 
-* **Lack of High Temperature Stars in TESS VSC Data**
-Why does TESS VSC have so few data points beyond ~12,000K? As a result, our analysis misses out on any aggregate data pertaining to O-type and B-type stars.
+* **Lack of High Temperature Stars in TESS SVC Data**
+Why does TESS SVC have so few data points beyond ~12,000K? As a result, our analysis misses out on any aggregate data pertaining to O-type and B-type stars.
 
-* **Lack of White Dwarfs in TESS VSC Data**
-Why are white dwarfs absent from the TESS VSC Data? Is it because they are not luminous enough to be detected in such a short viewing period?
+* **Lack of White Dwarfs in TESS SVC Data**
+Why are white dwarfs absent from the TESS SVC Data? Is it because they are not luminous enough to be detected in such a short viewing period?
   
 * **Small Quantity of Extreme Horizontal Branch Stars**
-There are very few stars on the extreme horizontal branch of the HR diagram in the pulsation dashboard. Why would these stars not be included in the TESS VSC if these stars, like subdwarf B stars, are popular subjects of stellar pulsation studies?
+There are very few stars on the extreme horizontal branch of the HR diagram in the pulsation dashboard. Why would these stars not be included in the TESS SVC if these stars, like subdwarf B stars, are popular subjects of stellar pulsation studies?
 
 * **Discrepancy Between GIANT and DWARF Publishing Rates**
 Why are GIANT stars studied disproportionately more than DWARF stars?
 
 ### Assumptions and Caveats
 
-* Observational biases may impact the completeness of TESS VSC, particularly in under-observed regions or for certain stellar classes. The data is likely skewed to reflect researcher preference rather than true astrophysical prevalence to some extent.
+* Observational biases may impact the completeness of TESS SVC, particularly in under-observed regions or for certain stellar classes. The data is likely skewed to reflect researcher preference rather than true astrophysical prevalence to some extent.
 
-* Spectral classifications provided by TESS VSC are useful, but not perfect (there are some outliers in the HR diagram–some giant stars labeled as GIANTS that seem to belong to the main sequence). Importantly, they are not granular enough. The spectral type calculated column "CleanClasses" aims to minimze the consequences of said granularity, but analysis is limited nonetheless. 
+* Spectral classifications provided by TESS SVC are useful, but not perfect (there are some outliers in the HR diagram–some giant stars labeled as GIANTS that seem to belong to the main sequence). Importantly, they are not granular enough. The spectral type calculated column "CleanClasses" aims to minimze the consequences of said granularity, but analysis is limited nonetheless. 
 
 * Data not included for O-type stars (there are less than 100 in the dataset).
 
