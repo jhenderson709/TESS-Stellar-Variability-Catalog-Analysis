@@ -32,7 +32,7 @@ The Transiting Exoplanet Survey Satellite (TESS) is a space telescope in Earth's
   <img src="https://github.com/user-attachments/assets/28a09eff-b35e-40c0-ae1f-7cfb85d89d0b">
 </p>
 
-> A demonstration of how TESS samples the night sky using data from the the TESS Variable Star Catalog. Each frame represents one sector of data from TESS' point of view. Note how the sectors flip from one hemisphere to the other – this change represents a new year of observations.
+> A demonstration of how TESS samples the night sky using data from the the TESS Stellar Variability Catalog. Each frame represents one sector of data from TESS' point of view. Note how the sectors flip from one hemisphere to the other – this change represents a new year of observations.
 
 
 The TESS Stellar Variability Catalog (TESS SVC), which was [published by the American Astronomical Society in 2023](https://iopscience.iop.org/article/10.3847/1538-4365/acdee5), worked to identify as many variable stars as possible within the first two years of TESS observations. Because TESS takes two years to complete its 'all-sky' survey cycle, we have access to most all known variable stars observed by TESS in our data set. The visualization below is configured to show all TESS SVC data for the first two years of the mission concurrently:
